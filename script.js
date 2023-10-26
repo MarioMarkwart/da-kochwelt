@@ -42,20 +42,20 @@ function getInputAmount() {
 
     //the resetet value can be multiplied with the inputAmount
     //if amount gets zero
-    if (amounts[i].innerHTML == 0) {
-
-      amounts[i].innerHTML = '';
-    }
-    else {
-      amounts[i].innerHTML = amounts[i].innerHTML / 4 * inputAmount;
+    if (isNumeric(amounts[i].innerHTML)) {
+      amounts[i].innerHTML = Math.round((amounts[i].innerHTML / 4 * inputAmount) * 100) / 100;
       console.log('amounts: ' + amounts[i].innerHTML);
     }
   }
 }
 
-/* TODO:
-- NaN abfangen
-- Nachkommastellen auf 1 Stelle nach dem Komma runden */
-
+/* https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number */
+function isNumeric(str) {
+  if (typeof str != "string"){
+    return false;
+  }else{
+    return !isNaN(str) && !isNaN(parseFloat(str))
+  }
+}
 
 
