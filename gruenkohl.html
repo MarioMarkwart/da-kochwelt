@@ -27,7 +27,7 @@
     <title>Kochwelt</title>
   </head>
 
-    <body>
+  <body>
     <nav class="navigation">
       <div class="nav-head">
         <a href="./index.html"
@@ -43,9 +43,9 @@
     </nav>
 
     <div class="daily-head daily-margin">
-      <h1>Griechischer Bauernsalat</h1>
+      <h1>Oldenburger Grünkohl</h1>
       <div class="box">
-        <div class="daily-head-img"></div>
+        <div class="rec-gruen"></div>
       </div>
       <div class="daily-head-cred">
         <div class="daily-cred">
@@ -53,21 +53,21 @@
             src="./img/icons/clock-regular.svg"
             alt="clock"
             class="daily-head-icon"
-          />15 Min.
+          />20 Min.
         </div>
         <div class="daily-cred">
           <img
             src="./img/icons/brain-solid.svg"
             alt="brain"
             class="daily-head-icon"
-          />simpel
+          />normal
         </div>
         <div class="daily-cred">
           <img
             src="./img/icons/calendar-alt-regular.svg"
             alt="brain"
             class="daily-head-icon"
-          />25.10.2023
+          />18.06.2012
         </div>
       </div>
     </div>
@@ -75,57 +75,70 @@
     <div class="daily-ing daily-margin">
       <div class="ing-amount-port">
         <div>Zutaten für</div>
-        <input id="ing-input" class="ing-input" 
-        type="number"  min="1" max="100" 
-        required value="4" 
+        <input
+          id="ing-input"
+          class="ing-input"
+          type="number"
+          min="1"
+          max="100"
+          required
+          value="4"
         />
 
         <button class="ing-button" onclick="getInputAmount()">Portionen</button>
       </div>
 
-      
       <!-- class="ing-amount" nur ist zum finden 
         aller Zutaten-Mengen durch das JS gedacht -->
       <section class="sec-ing">
         <div class="ingredient-even">
+          <div class="ing-amount">0.67</div>
+          <div>EL Griebenschmalz oder Entenschmalz</div>
+        </div>
+        <div class="ingredient-odd">
+          <div class="ing-amount">0.67</div>
+          <div>große Zwiebel(n), fein gehackt</div>
+        </div>
+        <div class="ingredient-even">
           <div class="ing-amount">1</div>
-          <div>Salatgurke(n)</div>
+          <div>kg Grünkohl, TK</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">2</div>
-          <div>Paprikaschote(n), rot und grün</div>
+          <div class="ing-amount">n.B.</div>
+          <div>Fleischbrühe oder Gemüsebrühe</div>
         </div>
+
         <div class="ingredient-even">
-          <div class="ing-amount">500</div>
-          <div>g Tomate(n)</div>
+          <div class="ing-amount">0.67</div>
+          <div>Scheibe/n Bauchspeck</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">2</div>
-          <div>Zwiebel(n)</div>
+          <div class="ing-amount">4</div>
+          <div>Scheibe/n Kasseler, geräuchert</div>
         </div>
         <div class="ingredient-even">
-          <div class="ing-amount">200</div>
-          <div>g Schafskäse</div>
+          <div class="ing-amount">1.33</div>
+          <div>EL Senf</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">1</div>
-          <div>Glas Oliven, scharze, ca. 100g</div>
+          <div class="ing-amount">4</div>
+          <div>Kochwürste oder Mettenden</div>
         </div>
         <div class="ingredient-even">
-          <div class="ing-amount"></div>
+          <div class="ing-amount">4</div>
+          <div>Pinkelwürste oder Grützwürste</div>
+        </div>
+        <div class="ingredient-odd">
+          <div class="ing-amount">n.B.</div>
           <div>Salz und Pfeffer</div>
         </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">1</div>
-          <div>Zitrone(n)</div>
-        </div>
         <div class="ingredient-even">
-          <div class="ing-amount">125</div>
-          <div>ml Olivenöl</div>
+          <div class="ing-amount">0.67</div>
+          <div>Prise(n) Zucker</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount"> </div>
-          <div>Oregano</div>
+          <div class="ing-amount">0.67</div>
+          <div>Handvoll Haferflocken oder Hafergrütze</div>
         </div>
       </section>
 
@@ -137,31 +150,48 @@
               src="./img/icons/clock-regular.svg"
               alt="clock"
               class="daily-head-icon"
-            />ca. 15 Minuten
+            />Arbeitszeit ca. 20 Minuten
           </div>
           <div class="daily-cred">
             <img
               src="./img/icons/clock-regular.svg"
               alt="brain"
               class="daily-head-icon"
-            />Gesamtzeit ca. 15 Minuten
+            />Koch-/Backzeit ca. 1 Stunde 45 Minuten
+          </div>
+          <div class="daily-cred">
+            <img
+              src="./img/icons/clock-regular.svg"
+              alt="brain"
+              class="daily-head-icon"
+            />Gesamtzeit ca. 2 Stunden 5 Minuten
           </div>
         </div>
 
         <p class="recp-text">
-          [TEXT BEARBEITEN!!] Die Wahl hängt von Ihren kulinarischen Vorlieben
-          und den Gerichten ab, die Sie zubereiten möchten. Wenn Sie oft
-          asiatische Gerichte oder Rühren-braten-Gerichte zubereiten, könnte ein
-          Wok eine gute Wahl sein. Wenn Sie jedoch vielseitigere Gerichte kochen
-          möchten, kann eine Pfanne die bessere Option sein. Einige Menschen
-          entscheiden sich auch dafür, sowohl eine Pfanne als auch einen Wok in
-          ihrer Küche zu haben, um eine größere Vielfalt an Kochmöglichkeiten zu
-          haben.
+          Schmalz in einem großen Kochtopf flüssig werden lassen und die fein
+          gehackte Zwiebel darin andünsten. Dann den Grünkohl darauf geben und
+          so viel Brühe angießen, dass der Kohl im Topf gerade bedeckt ist. Den
+          Kohl mindestens 60 Minuten köcheln lassen. Ab und an umrühren, evtl.
+          etwas Wasser nachgießen.<br /><br />
+
+          Dann den Speck und das Kasseler zufügen. Zwei EL Senf unterrühren, den
+          Kohl weitere 30 Min. schmoren lassen. Man kann die Kochwürste und
+          Pinkel auf dem Kohl garen lassen, sie brauchen ca. 15 Minuten. Ich
+          koche sie jedoch extra und kippe die Kochflüssigkeit weg, da diese
+          sehr fett ist. Das ist jedoch Ansichtssache. Grünkohl mit Salz,
+          Pfeffer und einer Prise Zucker abschmecken. Die Hafergrütze bzw.
+          Haferflocken unterrühren und abschließend 15 Minuten bei geringer
+          Hitze quellen lassen.<br /><br />
+
+          Dazu passen Salzkartoffeln.<br /><br />
+
+          Anmerkung: Vielen Oldenburgern schmecken auch Bratkartoffeln dazu.
         </p>
 
         <h3>Rezept erstellt von</h3>
         <div class="autor-box">
-          <div class="img-autor"></div>
+          <div class="img-autor-lukas"></div>
           <div>Lukas</div>
         </div>
       </section>
