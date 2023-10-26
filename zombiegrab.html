@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
+
+    <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Script einbinden  -->
+    <script src="script.js"></script>
+
+    <link rel="icon" type="image/png" href="./img/logo_small.png" />
+    <title>Kochwelt</title>
+  </head>
+
+    <body>
+    <nav class="navigation">
+      <div class="nav-head">
+        <a href="./index.html"
+          ><img class="nav-img" src="./img/logo.png" alt="Kochwelt-Logo"
+        /></a>
+        <div class="nav-bar">
+          <a href="./index.html" class="nav-link">Start</a>
+          <a href="#" class="nav-link">Rezept des Tages</a>
+          <a href="./kontakt.html" class="nav-link">Kontakt</a>
+          <a href="#" class="nav-link">Impressum</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="daily-head daily-margin">
+      <h1>Halloween Zombiegrab-Kuchen</h1>
+      <div class="box">
+        <div class="rec-zombiegrab-img"></div>
+      </div>
+      <div class="daily-head-cred">
+        <div class="daily-cred">
+          <img
+            src="./img/icons/clock-regular.svg"
+            alt="clock"
+            class="daily-head-icon"
+          />15 Min.
+        </div>
+        <div class="daily-cred">
+          <img
+            src="./img/icons/brain-solid.svg"
+            alt="brain"
+            class="daily-head-icon"
+          />simpel
+        </div>
+        <div class="daily-cred">
+          <img
+            src="./img/icons/calendar-alt-regular.svg"
+            alt="brain"
+            class="daily-head-icon"
+          />26.10.2023
+        </div>
+      </div>
+    </div>
+
+    <div class="daily-ing daily-margin">
+      <div class="ing-amount-port">
+        <div>Zutaten für</div>
+        <input id="ing-input" class="ing-input" 
+        type="number"  min="1" max="100" 
+        required value="4" 
+        />
+
+        <button class="ing-button" onclick="getInputAmount()">Portionen</button>
+      </div>
+
+      
+      <!--
+        class="ing-amount" nur ist zum finden 
+        aller Zutaten-Mengen durch das JS gedacht 
+        Hier die Mengen für 4 Portionen eintragen!
+      -->
+      <section class="sec-ing">
+        <p class="ingredient-whatFor-odd">Für den Teig:</p>
+        <div class="ingredient-even">
+          <div class="ing-amount">5</div>
+          <div>Ei(er)</div>
+        </div>
+        <div class="ingredient-odd">
+          <div class="ing-amount">2</div>
+          <div>Tasse(n) Mehl</div>
+        </div>
+        <div class="ingredient-even">
+          <div class="ing-amount">1.5</div>
+          <div>Tasse(n) Zucker</div>
+        </div>
+        <div class="ingredient-odd">
+          <div class="ing-amount">0.5</div>
+          <div>Tasse(n) Kakaopulver</div>
+        </div>
+        <div class="ingredient-even">
+          <div class="ing-amount">1</div>
+          <div>Pck. Backpulver</div>
+        </div>
+        <div class="ingredient-odd">
+          <div class="ing-amount">3</div>
+          <div>Tasse(n) Haselnüsse</div>
+        </div>
+        <div class="ingredient-even">
+          <div class="ing-amount">1</div>
+          <div>Tasse Öl</div>
+        </div>
+        <div class="ingredient-odd">
+          <div class="ing-amount">1</div>
+          <div>Tasse Mineralwasser</div>
+        </div>
+        <div class="ingredient-even">
+          <div class="ing-amount"></div>
+          <div>Fett für die Form</div>
+        </div>
+        <p class="ingredient-whatFor-even">Für die Garnitur:</p>
+        <div class="ingredient-odd">
+          <div class="ing-amount">1</div>
+          <div>Pck. Schokoglasur</div>
+        </div>
+        <div class="ingredient-even">
+          <div class="ing-amount">1</div>
+          <div>Pck. Kekse (Oreo)</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Zubereitung</h2>
+        <div class="daily-head-cred">
+          <div class="daily-cred">
+            <img
+              src="./img/icons/clock-regular.svg"
+              alt="clock"
+              class="daily-head-icon"
+            />Arbeitszeit ca. 30 Minuten
+          </div>
+          <div class="daily-cred">
+            <img
+              src="./img/icons/clock-regular.svg"
+              alt="brain"
+              class="daily-head-icon"
+            />Koch-/Backzeit ca. 45 Minuten
+          </div>
+          <div class="daily-cred">
+            <img
+              src="./img/icons/clock-regular.svg"
+              alt="brain"
+              class="daily-head-icon"
+            />Gesamtzeit ca. 1 Stunde 15 Minuten
+          </div>
+        </div>
+
+        <p class="recp-text">
+          Zum Abmessen eine Kaffeetasse (ca. 150 ml) verwenden, keinen Becher.<br>
+
+Den Ofen auf 170 °C Ober-/Unterhitze vorheizen.<br>
+<br>
+Zuerst die trocknen Zutaten mischen und anschließend die Eier und Flüssigkeiten hinzufügen. Den Teig in eine gefettete Springform füllen und ca. 35 - 45 min backen. Der Kuchen ist fertig, wenn man einen Zahnstocher reinstecken kann und beim Rausziehen kein Teig mehr dranklebt.<br>
+<br>
+
+Während der Kuchen im Ofen ist, die Kekse mit der Hand auf einer Reibe raspeln. Das ist anstrengend, aber das Resultat ist gut, weil es unterschiedlich große Stücke werden.<br>
+<br>
+Den Kuchen abkühlen lassen. Anschließend mit Kuchenglasur überziehen und die Keksstreusel auf die warme Glasur streuen. Den Kuchen anschließend mit einem Puppenarm oder einem "Grabstein" verzieren.<br>
+<br>
+Tipp: Außerhalb von Halloween könnte man ihn auch mit Maulwürfen verzieren.
+        </p>
+
+        <h3>Rezept erstellt von</h3>
+        <div class="autor-box">
+          <div class="img-autor-mario"></div>
+          <div>Mario</div>
+        </div>
+      </section>
+      <div class="footer">
+      <img src="./img/logo.png" alt="Logo" class="footer-img" />
+      <div>(c) by Mario Markwart, Lukas Nolting</div>
+      <div class="footer-icons">
+        <a href="www.facebook.com"
+          ><img src="./img/facebook.png" alt="facebook" class="footer-icon"
+        /></a>
+        <a href="www.twitter.com"
+          ><img src="./img/twitter.png" alt="facebook" class="footer-icon"
+        /></a>
+        <a href="www.instagram.com"
+          ><img src="./img/instagram.webp" alt="facebook" class="footer-icon"
+        /></a>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
