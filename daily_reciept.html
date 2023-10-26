@@ -20,12 +20,14 @@
       rel="stylesheet"
     />
 
-    <!--  -->
+    <!-- Script einbinden  -->
+    <script src="script.js"></script>
 
     <link rel="icon" type="image/png" href="./img/logo_small.png" />
     <title>Kochwelt</title>
   </head>
-  <body>
+
+    <body>
     <nav class="navigation">
       <div class="nav-head">
         <a href="./index.html"
@@ -73,50 +75,57 @@
     <div class="daily-ing daily-margin">
       <div class="ing-amount-port">
         <div>Zutaten für</div>
-        <input class="ing-input" type="number" min="1" max="100" required />
-        <button class="ing-button">Portionen</button>
+        <input id="ing-input" class="ing-input" 
+        type="number"  min="1" max="100" 
+        required value="4" 
+        />
+
+        <button class="ing-button" onclick="getInputAmount()">Portionen</button>
       </div>
 
+      
+      <!-- class="ing-amount" nur ist zum finden 
+        aller Zutaten-Mengen durch das JS gedacht -->
       <section class="sec-ing">
         <div class="ingredient-even">
           <div class="ing-amount">1</div>
-          <div>Salatgurke</div>
+          <div>Salatgurke(n)</div>
         </div>
         <div class="ingredient-odd">
           <div class="ing-amount">2</div>
           <div>Paprikaschote(n), rot und grün</div>
         </div>
         <div class="ingredient-even">
-          <div class="ing-amount">3</div>
-          <div>Salatgurke</div>
+          <div class="ing-amount">500</div>
+          <div>g Tomate(n)</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">4</div>
-          <div>Paprikaschote(n), rot und grün</div>
+          <div class="ing-amount">2</div>
+          <div>Zwiebel(n)</div>
         </div>
         <div class="ingredient-even">
-          <div class="ing-amount">5</div>
-          <div>Salatgurke</div>
+          <div class="ing-amount">200</div>
+          <div>g Schafskäse</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">6</div>
-          <div>Paprikaschote(n), rot und grün</div>
+          <div class="ing-amount">1</div>
+          <div>Glas Oliven, scharze, ca. 100g</div>
         </div>
         <div class="ingredient-even">
-          <div class="ing-amount">7</div>
-          <div>Salatgurke</div>
+          <div class="ing-amount"></div>
+          <div>Salz und Pfeffer</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">8</div>
-          <div>Paprikaschote(n), rot und grün</div>
+          <div class="ing-amount">1</div>
+          <div>Zitrone(n)</div>
         </div>
         <div class="ingredient-even">
-          <div class="ing-amount">9</div>
-          <div>Salatgurke</div>
+          <div class="ing-amount">125</div>
+          <div>ml Olivenöl</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount">10</div>
-          <div>Paprikaschote(n), rot und grün</div>
+          <div class="ing-amount"></div>
+          <div>Oregano</div>
         </div>
       </section>
 

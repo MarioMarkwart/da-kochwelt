@@ -221,11 +221,13 @@ span {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 120px;
+  padding-left: 10px;
+  
 }
 .ingredient-odd {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   width: 100%;
   background-color: #efefef;
   border-radius: 10px;
@@ -233,7 +235,7 @@ span {
 .ingredient-even {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   width: 100%;
 
   border-radius: 10px;
