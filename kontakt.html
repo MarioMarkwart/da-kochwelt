@@ -23,7 +23,7 @@
   <body>
     <nav class="navigation">
       <div class="nav-head">
-        <a href="#"
+        <a href="./index.html"
           ><img class="nav-img" src="./img/logo.png" alt="Kochwelt-Logo"
         /></a>
         <div class="nav-bar">
@@ -36,17 +36,22 @@
     </nav>
 
     <div class="contact-card">
-      <form onsubmit="sendMail(event)">
-        <label>
-          Your email:
-          <input type="email" name="email" />
+      <form onsubmit="sendMail(event)" class="contact-form">
+        <label class="contact-label">
+          <div class="contact-text">Deine E-Mail Adresse</div>
+          <input type="email" name="email" placeholder="E-Mail eingeben..." class="contact-input" required/>
         </label>
-        <label>
-          Your message:
-          <textarea name="message"></textarea>
+        <label class="contact-label">
+          <div class="contact-text">Deine Nachricht</div>
+          <textarea name="message" placeholder="Nachricht eingeben..." class="contact-textarea"></textarea>
         </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
+        <label class="contact-label-data"><input type="checkbox" name="Datenschutz" required>
+          <div class="contact-agree-data">Hiermit stimme ich den <a href="./index.html" target="_parent">Datenschutzbestimmungen</a> zu.</div>
+          </label>
+          
+        <div class="submit-flex">
+        <button type="submit" class="ing-button">Senden</button>
+        </div>
       </form>
     </div>
   </body>
