@@ -27,7 +27,7 @@
     <title>Kochwelt</title>
   </head>
 
-    <body>
+  <body>
     <nav class="navigation">
       <div class="nav-head">
         <a href="./index.html"
@@ -75,15 +75,19 @@
     <div class="daily-ing daily-margin">
       <div class="ing-amount-port">
         <div>Zutaten für</div>
-        <input id="ing-input" class="ing-input" 
-        type="number"  min="1" max="100" 
-        required value="4" 
+        <input
+          id="ing-input"
+          class="ing-input"
+          type="number"
+          min="1"
+          max="100"
+          required
+          value="4"
         />
 
         <button class="ing-button" onclick="getInputAmount()">Portionen</button>
       </div>
 
-      
       <!-- class="ing-amount" nur ist zum finden 
         aller Zutaten-Mengen durch das JS gedacht -->
       <section class="sec-ing">
@@ -124,7 +128,7 @@
           <div>ml Olivenöl</div>
         </div>
         <div class="ingredient-odd">
-          <div class="ing-amount"> </div>
+          <div class="ing-amount"></div>
           <div>Oregano</div>
         </div>
       </section>
@@ -165,6 +169,21 @@
           <div>Lukas</div>
         </div>
       </section>
+      <div class="footer">
+        <img src="./img/logo.png" alt="Logo" class="footer-img" />
+        <div>(c) by Mario Markwart, Lukas Nolting</div>
+        <div class="footer-icons">
+          <a href="www.facebook.com"
+            ><img src="./img/facebook.png" alt="facebook" class="footer-icon"
+          /></a>
+          <a href="www.twitter.com"
+            ><img src="./img/twitter.png" alt="facebook" class="footer-icon"
+          /></a>
+          <a href="www.instagram.com"
+            ><img src="./img/instagram.webp" alt="facebook" class="footer-icon"
+          /></a>
+        </div>
+      </div>
     </div>
   </body>
 </html>

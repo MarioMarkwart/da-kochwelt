@@ -429,7 +429,11 @@ span {
   height: 150px;
 }
 
-::placeholder {
+.contact-textarea::placeholder {
+  font-family: "Raleway";
+}
+
+.contact-input::placeholder {
   font-family: "Raleway";
 }
 
@@ -466,4 +470,26 @@ span {
 .link {
   text-decoration: none;
   color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.footer-img {
+  height: 60px;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-icon {
+  height: 30px;
 }
