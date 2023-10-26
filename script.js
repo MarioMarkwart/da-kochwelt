@@ -53,4 +53,9 @@ function getInputAmount() {
   }
 }
 
+/* TODO:
+- NaN abfangen
+- Nachkommastellen auf 1 Stelle nach dem Komma runden */
+
+
 
