@@ -268,6 +268,8 @@ span {
   background-color: green;
   border-style: none;
   cursor: pointer;
+  color: white;
+  text-decoration: none;
   border: 9.5px solid green;
 }
 
@@ -379,17 +381,15 @@ span {
   margin: auto;
   border-radius: 15px;
   margin-top: 80px;
-  background-color: #F2F1F1;
+  background-color: #f2f1f1;
 }
 
 .contact-form {
   display: flex;
-
   flex-direction: column;
   width: 80%;
   height: 80%;
   justify-content: space-between;
-  
 }
 
 .contact-label {
@@ -412,22 +412,41 @@ span {
   height: 150px;
 }
 
-::placeholder{
-  font-family: 'Raleway';
+::placeholder {
+  font-family: "Raleway";
 }
 
-.contact-label-data{
+.contact-label-data {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
 }
 
-.contact-agree-data{
-
+.contact-agree-data {
   font-size: 14px;
 }
 
-.submit-flex{
+.submit-flex {
   display: flex;
   justify-content: center;
+}
+
+.contact-submitted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 80px;
+  background-color: #f2f1f1;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
 }
