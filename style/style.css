@@ -105,7 +105,6 @@ h1 {
 
 .new-img-wok {
   background-image: url("../img/wok.jpg");
-  overflow: hidden;
   width: 300px;
   background-size: cover;
   background-position: center;
@@ -165,7 +164,6 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  overflow: hidden;
 }
 
 .main-img {
@@ -208,7 +206,6 @@ span {
 
 .box {
   width: 100%;
-  overflow: hidden;
   border-radius: 10px;
 }
 
