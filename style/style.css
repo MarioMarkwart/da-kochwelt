@@ -65,7 +65,7 @@ h1 {
 .head-content {
   display: flex;
   justify-content: space-between;
-  margin-top: 160px;
+  margin-top: 60px;
   margin-bottom: 60px;
   width: 100%;
   background-color: white;
@@ -216,7 +216,7 @@ span {
   background-image: url("../img/salad.jpg");
   overflow: hidden;
   width: 100%;
-  height: 150px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -374,8 +374,60 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 500px;
   width: 500px;
-  border: 3px solid black;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 80px;
+  background-color: #F2F1F1;
+}
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  justify-content: space-between;
+  
+}
+
+.contact-label {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-input {
+  border: 1px solid #008000;
+  border-radius: 2px;
+  padding: 8px 20px;
+}
+
+.contact-textarea {
+  border: 1px solid #008000;
+  border-radius: 2px;
+  padding: 10px 20px;
+  height: 150px;
+}
+
+::placeholder{
+  font-family: 'Raleway';
+}
+
+.contact-label-data{
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.contact-agree-data{
+
+  font-size: 14px;
+}
+
+.submit-flex{
+  display: flex;
+  justify-content: center;
 }
