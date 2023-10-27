@@ -77,63 +77,19 @@ h1 {
   margin-left: 180px;
 }
 
-.new-img-gruenkohl {
-  background-image: url("../img/gruenkohl.jpg");
+.new-img-general {
+  /* background-image: url("../img/kaesespaetzle.jpg"); */
   overflow: hidden;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  /* background-size: cover; */
+  /* background-position: center; */
   border-radius: 10px;
-  transition: transform 750ms;
+  transition: transform 500ms;
+  display:flex;
+  justify-content: center;
 }
 
-.new-img-kaesespaetzle {
-  background-image: url("../img/kaesespaetzle.jpg");
-  overflow: hidden;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-.new-img-zombiegrab {
-  background-image: url("../img/zombiegrab.webp");
-  overflow: hidden;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-
-.new-img-gruenkohl:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.new-img-wok {
-  background-image: url("../img/wok.jpg");
-  width: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 750ms;
-}
-
-.new-img-wok:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.new-img-kaesespaetzle:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-.new-img-zombiegrab:hover {
+.new-img-general:hover {
   transform: scale(1.1);
   overflow: hidden;
   border-radius: 10px;
