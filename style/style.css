@@ -156,7 +156,6 @@ span {
   padding-right: 50px;
 }
 
-
 .box {
   width: 100%;
   border-radius: 15px;
@@ -275,7 +274,7 @@ span {
   }
 }
 
-@media (max-width: 835px) {
+@media (max-width: 840px) {
   .head-content {
     flex-direction: column;
     gap: 30px;
@@ -283,17 +282,21 @@ span {
   }
 
   .head-img {
-    width: 80%;
+    width: 100%;
     height: 250px;
+    object-fit: cover;
   }
 
+  .box {
+    width: 100%;
+  }
   .content-column {
-    width: 80%;
+    width: 100%;
     justify-content: center;
   }
   .content-header {
     padding: 0;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,7 +306,10 @@ span {
   span {
     padding-right: 0;
   }
-  #text {
-    text-align: justify;
+
+  .main-img{
+    width: 100%;
   }
+
+  .content{flex-direction: column;}
 }
