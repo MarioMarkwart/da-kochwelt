@@ -8,15 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
-.link {
-  text-decoration: none;
-  color: black;
-}
-
 .navigation {
   box-shadow: 6px 4px 6px rgba(17, 3, 3, 0.14);
   top: 0;
@@ -29,7 +20,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 180px 0 180px;
 }
 
 .nav-img {
@@ -64,71 +54,80 @@ h1 {
 
 .head-content {
   display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  width: 100%;
-  background-color: white;
 }
 
-.croissant-img {
-  height: 350px;
-  border-radius: 5px;
-  margin-left: 180px;
+.head-img {
+  height: 260px;
+  border-radius: 15px;
 }
 
 .new-img-general {
-  /* background-image: url("../img/kaesespaetzle.jpg"); */
   overflow: hidden;
   width: 100%;
-  /* background-size: cover; */
-  /* background-position: center; */
-  border-radius: 10px;
+  border-radius: 15px;
   transition: transform 500ms;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 .new-img-general:hover {
   transform: scale(1.1);
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+.margin-side {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.padding-side {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.padding-topbot {
+  padding: 30px 0;
 }
 
 .content-header {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
   padding-left: 40px;
+  justify-content: space-around;
 }
 
 .button {
   width: 200px;
   padding: 12px 30px;
-  margin-top: 130px;
   color: white;
   background-color: green;
   border-style: none;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: rgb(24, 155, 12);
   cursor: pointer;
 }
 
-.main-content {
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey-section {
   background-color: rgba(202, 199, 199, 0.247);
-  padding-bottom: 30px;
+  width: 100%;
 }
 
 .top-text {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .content {
   display: flex;
-
   justify-content: space-between;
-  margin-left: 180px;
-  margin-right: 180px;
 }
 
 .content-column {
@@ -140,7 +139,7 @@ h1 {
 .main-img {
   height: 240px;
   width: 260px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 h4 {
@@ -148,347 +147,32 @@ h4 {
   color: black;
 }
 
-.desc {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-left: 180px;
-  margin-right: 180px;
-  margin-bottom: 30px;
-}
-
 span {
-  padding-right: 50px;
   text-align: justify;
   line-height: 30px;
-  max-width: 950px;
 }
 
-/* Rezept des Tages */
-
-.daily-margin {
-  margin: 0 180px 0 180px;
+.padding-footer {
+  padding-right: 50px;
 }
 
-.daily-head {
-  display: flex;
-  flex-direction: column;
-  margin-top: 60px;
-}
 
 .box {
   width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.daily-head-img {
-  background-image: url("../img/salad.jpg");
-  overflow: hidden;
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-
-.daily-head-img:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.daily-head-icon {
-  width: 15px;
-}
-
-.daily-head-cred {
-  display: flex;
-  gap: 15px;
-  margin: 25px 0;
-}
-
-.daily-cred {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  background-color: #efefef;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.daily-ing {
-  border-top: 2px solid #efefef;
-  height: 10px;
-  margin-top: 30px;
-}
-
-.ing-amount-port {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  height: 30px;
-}
-
-.ing-button {
-  width: 140px;
-  color: white;
-  background-color: green;
-  border-style: none;
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-  border: 9.5px solid green;
-}
-
-.ing-input {
-  height: 100%;
-  margin-left: 15px;
-  border: 2px solid #efefef;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  width: 120px;
-  padding-left: 10px;
-}
-.ingredient-odd {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: 100%;
-  background-color: #efefef;
-  border-radius: 10px;
-  min-height: 46px;
-  
-  /* für einen kleinen Rand */
-  border-color: #efefef;
-  border-style: solid;
-  border-width: 1px;
-
-}
-.ingredient-even {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: 100%;
-  min-height: 46px;
-  border-radius: 10px;
-  
-  /* für einen kleinen Rand */
-  border-color: #efefef;
-  border-style: solid;
-  border-width: 1px;
-}
-
-.ingredient-whatFor-odd{
-  font-weight: bold;
-  padding: 20px 0 0 5px;
-}
-
-.ingredient-whatFor-even{
-  font-weight: bold;
-  padding: 20px 0 10px  5px;
-}
-.sec-ing {
-  margin: 15px 0 35px 0;
-}
-
-.ing-amount {
-  padding: 15px 0 15px 25px;
-}
-
-.recp-text {
-  margin-bottom: 25px;
-}
-
-.img-autor-lukas {
-  height: 80px;
-  width: 80px;
-  background-image: url(../img/Lukas.jpg);
-  border-radius: 50%;
-  background-size: cover;
-  margin: 20px 20px 20px 0px;
-}
-
-.autor-box {
-  display: flex;
-  align-items: center;
-  padding-bottom: 30px;
-  font-size: 24px;
-  font-weight: 300;
-}
-
-.rec-gruen {
-  background-image: url("../img/gruenkohl.jpg");
-  overflow: hidden;
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-
-.rec-gruen:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.rec-curry {
-  background-image: url("../img/currywurst.jpeg");
-  overflow: hidden;
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-
-.rec-curry:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.rec-kaesespaetzle-img {
-  background-image: url("../img/kaesespaetzle.jpg");
-  overflow: hidden;
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-
-.rec-kaesespaetzle-img:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.rec-zombiegrab-img {
-  background-image: url("../img/zombiegrab.webp");
-  overflow: hidden;
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  transition: transform 750ms;
-}
-
-.rec-zombiegrab-img:hover {
-  transform: scale(1.1);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.img-autor-mario {
-  height: 80px;
-  width: 80px;
-  background-image: url("../img/mario.png");
-  border-radius: 50%;
-  background-size: cover;
-  margin: 20px 20px 20px 0px;
-}
-
-.contact-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  width: 500px;
-  margin: auto;
   border-radius: 15px;
-  margin-top: 80px;
-  background-color: #f2f1f1;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 80%;
-  justify-content: space-between;
-}
-
-.contact-label {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.contact-input {
-  border: 1px solid #008000;
-  border-radius: 2px;
-  padding: 8px 20px;
-}
-
-.contact-textarea {
-  border: 1px solid #008000;
-  border-radius: 2px;
-  padding: 10px 20px;
-  height: 150px;
-}
-
-.contact-textarea::placeholder {
-  font-family: "Raleway";
-}
-
-.contact-input::placeholder {
-  font-family: "Raleway";
-}
-
-.contact-label-data {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-.contact-agree-data {
-  font-size: 14px;
-}
-
-.submit-flex {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-submitted {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  flex-direction: column;
-  height: 500px;
-  width: 500px;
-  margin: auto;
-  border-radius: 15px;
-  margin-top: 80px;
-  background-color: #f2f1f1;
-  text-align: center;
-}
-
-.link {
-  text-decoration: none;
-  color: white;
+  overflow: hidden;
 }
 
 .footer {
+  box-shadow: 0px 6px 4px 6px rgba(17, 3, 3, 0.14);
+  bottom: 0;
+}
+
+.footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  width: 100%;
-}
-
-.footer-img {
-  height: 60px;
+  height: 100%;
 }
 
 .footer-icons {
@@ -499,4 +183,127 @@ span {
 
 .footer-icon {
   height: 30px;
+}
+
+.footer-link {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.footer-link:hover {
+  color: green;
+  text-decoration: underline;
+  text-underline-position: above;
+  text-underline-offset: 50%;
+  text-decoration-thickness: 3px;
+}
+
+.footer-start {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.c-icon {
+  height: 16px;
+  width: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 1550px) {
+  .margin-side {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .padding-side {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .margin-side {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .padding-side {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .margin-side {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .padding-side {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 910px) {
+  .margin-side {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .content-header {
+    padding-left: 20px;
+  }
+  .padding-side {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nav-head {
+    justify-content: space-around;
+  }
+  .padding-footer {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 835px) {
+  .head-content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .head-img {
+    width: 80%;
+    height: 250px;
+  }
+
+  .content-column {
+    width: 80%;
+    justify-content: center;
+  }
+  .content-header {
+    padding: 0;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  span {
+    padding-right: 0;
+  }
+  #text {
+    text-align: justify;
+  }
 }
