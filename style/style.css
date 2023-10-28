@@ -33,6 +33,10 @@ html {
   display: none;
 }
 
+.nav-img-burger:hover {
+  cursor: pointer;
+}
+
 .nav-bar {
   display: flex;
   align-items: flex-start;
