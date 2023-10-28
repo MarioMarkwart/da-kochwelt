@@ -175,7 +175,7 @@ html {
   justify-content: space-between;
 }
 
-.button {
+.button-curry {
   width: 200px;
   padding: 12px 30px;
   color: white;
@@ -184,7 +184,7 @@ html {
   border-radius: 10px;
 }
 
-.button:hover {
+.button-curry:hover {
   background-color: rgb(24, 155, 12);
   cursor: pointer;
 }
