@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <!-- Burger Icon -->
+    <rect width="60" height="10" x="20" y="20" fill="#008000" />
+    <rect width="60" height="10" x="20" y="40" fill="#008000" />
+    <rect width="60" height="10" x="20" y="60" fill="#008000" />
+</svg>
