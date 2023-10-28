@@ -20,6 +20,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  height: 100px;
 }
 
 .nav-img {
@@ -55,6 +56,71 @@ html {
   text-underline-offset: 100%;
   text-decoration-thickness: 3px;
 }
+
+/* BURGER MENU */
+.dialog-bg {
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dialog {
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 24px;
+  height: 200px;
+  width: 20%;
+  min-width: 140px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.burger-menu-links {
+  text-decoration: none;
+  color: #008000;
+}
+
+.burger-menu-links:hover {
+  color: green;
+  text-decoration: underline;
+  padding-bottom: 0px;
+  text-decoration-thickness: 3px;
+}
+
+.burger-close {
+  height: 30px;
+}
+
+.burger-close:hover {
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+
+.burger-none {
+  display: none;
+}
+
+/* ENDE BURGER MENU */
 
 .head-img {
   height: 260px;
@@ -144,13 +210,6 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-
-/* .content-column {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-} */
-
 .main-img {
   border-radius: 15px;
   text-align: center;
@@ -178,12 +237,6 @@ p {
   padding-right: 50px;
 }
 
-/* .box {
-  width: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-} */
-
 .footer {
   box-shadow: 0px 6px 4px 6px rgba(17, 3, 3, 0.14);
   bottom: 0;
@@ -199,7 +252,7 @@ p {
 .footer-icons {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 30px;
 }
 
 .footer-icon {
@@ -337,7 +390,6 @@ p {
   .content-header {
     width: 100%;
     display: flex;
-    padding: 0 130px;
     justify-content: center;
     align-items: center;
   }
@@ -406,21 +458,22 @@ p {
 
 /* 850px */
 
-@media (max-width: 690px) {
+@media (max-width: 750px) {
   .nav-bar {
     display: none;
   }
   .footer-link {
     display: none;
   }
-  .nav-img-burger {
-    display: inherit;
-    height: 40px;
-  }
+
   .nav-head {
     justify-content: space-between;
     margin: 0 30px;
     align-items: center;
+  }
+  .nav-img-burger {
+    display: inherit;
+    height: 50px;
   }
 }
 
@@ -446,5 +499,19 @@ p {
   }
   .nav-img {
     height: 40px;
+  }
+  .nav-img-burger {
+    height: 40px;
+  }
+
+  .footer-start {
+    display: none;
+  }
+
+  .footer-content {
+    justify-content: center;
+  }
+  .footer-icons {
+    gap: 50px;
   }
 }

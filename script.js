@@ -19,13 +19,12 @@ function sendMail(event) {
 
 let originAmounts = [];
 function getInputAmount() {
-
-  //get the value of inputfield 
-  let inputAmount = document.getElementById('ing-input').value
+  //get the value of inputfield
+  let inputAmount = document.getElementById("ing-input").value;
   console.log(`Zutaten für: ${inputAmount}`);
 
   // find all classes with 'ing-amount'
-  let amounts = document.getElementsByClassName('ing-amount');
+  let amounts = document.getElementsByClassName("ing-amount");
 
   //saving the original amount-values only on the first run
   if (originAmounts.length == 0) {
@@ -35,7 +34,7 @@ function getInputAmount() {
   }
   //iterate through the array
   for (let i = 0; i < amounts.length; i++) {
-    console.log('origin: ' + originAmounts[i]);
+    console.log("origin: " + originAmounts[i]);
 
     //reset the actual to the original value to calculate with it
     amounts[i].innerHTML = originAmounts[i];
@@ -43,19 +42,28 @@ function getInputAmount() {
     //the resetet value can be multiplied with the inputAmount
     //if amount gets zero
     if (isNumeric(amounts[i].innerHTML)) {
-      amounts[i].innerHTML = Math.round((amounts[i].innerHTML / 4 * inputAmount) * 100) / 100;
-      console.log('amounts: ' + amounts[i].innerHTML);
+      amounts[i].innerHTML =
+        Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
+      console.log("amounts: " + amounts[i].innerHTML);
     }
   }
 }
 
 /* https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number */
 function isNumeric(str) {
-  if (typeof str != "string"){
+  if (typeof str != "string") {
     return false;
-  }else{
-    return !isNaN(str) && !isNaN(parseFloat(str))
+  } else {
+    return !isNaN(str) && !isNaN(parseFloat(str));
   }
 }
 
+// BURGER MENU
 
+function dialogShow() {
+  document.getElementById("dialog").classList.remove("d-none");
+}
+
+function dialogRemove() {
+  document.getElementById("dialog").classList.add("d-none");
+}
