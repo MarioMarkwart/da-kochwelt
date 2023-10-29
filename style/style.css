@@ -83,7 +83,7 @@ html {
 
 /* BURGER MENU */
 .dialog-bg {
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   z-index: 999;
   position: fixed;
   right: 0;
@@ -96,9 +96,10 @@ html {
 }
 
 .dialog {
+  /* margin-top:100px; */
   background-color: white;
   border: 1px solid lightgray;
-  box-shadow: -4px 4px 10px -1px rgba(0, 128, 0, 0.83);
+  box-shadow: -4px 4px 10px -1px rgba(224, 224, 224, 0.83);
   padding: 24px;
   height: 230px;
   width: 20%;
