@@ -38,14 +38,16 @@
         <!-- BURGER MENU-->
 
         <div onclick="dialogRemove()" id="dialog" class="dialog-bg d-none">
-          <div class="dialog">
+          <div 
+          class="dialog" id="burger-dialog"
+          >
             <div class="burger-menu">
               <img
                 src="./img/icons/burger-close.svg"
                 onclick="dialogRemove()"
                 class="burger-close"
                 id="menu-button"
-              /> 
+              />
               <a href="./index.html" class="burger-menu-links">Startseite</a>
               <a href="./daily_reciept.html" class="burger-menu-links"
                 >Rezept des Tages</a
@@ -87,7 +89,7 @@
             kulturelles Symbol in Deutschland.</span
           >
 
-          <a href="./currywurst.html">
+          <a href="./currywurst.html" class="a-curry">
             <button class="button-curry">Rezept öffnen</button></a
           >
         </div>
@@ -143,29 +145,15 @@
 
     <footer class="footer padding-topbot">
       <div class="footer-content margin-side">
-        <a href="#top">
-          <img
-            src="./img/logo_small.png"
-            alt="logo klein"
-            class="footer-logo-small logo-small-d-none-media"
-          />
-        </a>
         <div class="footer-start">
           <img src="./img/icons/c.png" class="c-icon" /> Mario Markwart, Lukas
           Nolting
         </div>
 
-        <a href="./impress.html" class="footer-link">Impressum</a>
+      
         <a href="./privacy.html" class="footer-link">Datenschutz</a>
 
         <div class="footer-icons">
-          <a href="#top">
-            <img
-              src="./img/logo_small.png"
-              alt="logo klein"
-              class="footer-icon logo-small-d-none"
-            />
-          </a>
           <a href="www.facebook.com"
             ><img
               src="./img/icons/facebook.png"
@@ -184,7 +172,21 @@
               alt="facebook"
               class="footer-icon"
           /></a>
+          <a href="#top">
+            <img
+              src="./img/logo_small_arrow_above.png"
+              alt="logo klein"
+              class="footer-icon logo-small-d-none"
+            />
+          </a>
         </div>
+        <a href="#top">
+          <img
+            src="./img/logo_small_arrow_above.png"
+            alt="logo klein"
+            class="footer-logo-small logo-small-d-none-media"
+          />
+        </a>
       </div>
     </footer>
   </body>
