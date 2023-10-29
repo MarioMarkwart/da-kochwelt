@@ -1,10 +1,9 @@
 /* --- header and footer --- */
 async function includeHTML() {
-  console.log("HIER BIN ICH!!!!!!!");
   let includeElements = document.querySelectorAll('[w3-include-html]');
   for (let i = 0; i < includeElements.length; i++) {
     const element = includeElements[i];
-    file = element.getAttribute("w3-include-html"); // "includes/header.html"
+    file = element.getAttribute("w3-include-html");
     let resp = await fetch(file);
     if (resp.ok) {
       element.innerHTML = await resp.text();
@@ -39,30 +38,37 @@ let originAmounts = [];
 function getInputAmount() {
   //get the value of inputfield
   let inputAmount = document.getElementById("ing-input").value;
-  console.log(`Zutaten für: ${inputAmount}`);
-
-  // find all classes with 'ing-amount'
-  let amounts = document.getElementsByClassName("ing-amount");
-
-  //saving the original amount-values only on the first run
-  if (originAmounts.length == 0) {
-    for (let i = 0; i < amounts.length; i++) {
-      originAmounts.push(amounts[i].innerHTML);
-    }
+  
+  if (inputAmount < 1) {
+    document.getElementById('ing-input').value = 1;
+    inputAmount = 1;
   }
-  //iterate through the array
-  for (let i = 0; i < amounts.length; i++) {
-    console.log("origin: " + originAmounts[i]);
+  else {
+    console.log(`Zutaten für: ${inputAmount}`);
 
-    //reset the actual to the original value to calculate with it
-    amounts[i].innerHTML = originAmounts[i];
+    // find all classes with 'ing-amount'
+    let amounts = document.getElementsByClassName("ing-amount");
 
-    //the resetet value can be multiplied with the inputAmount
-    //if amount gets zero
-    if (isNumeric(amounts[i].innerHTML)) {
-      amounts[i].innerHTML =
-        Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
-      console.log("amounts: " + amounts[i].innerHTML);
+    //saving the original amount-values only on the first run
+    if (originAmounts.length == 0) {
+      for (let i = 0; i < amounts.length; i++) {
+        originAmounts.push(amounts[i].innerHTML);
+      }
+    }
+    //iterate through the array
+    for (let i = 0; i < amounts.length; i++) {
+      console.log("origin: " + originAmounts[i]);
+
+      //reset the actual to the original value to calculate with it
+      amounts[i].innerHTML = originAmounts[i];
+
+      //the resetet value can be multiplied with the inputAmount
+      //if amount gets zero
+      if (isNumeric(amounts[i].innerHTML)) {
+        amounts[i].innerHTML =
+          Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
+        console.log("amounts: " + amounts[i].innerHTML);
+      }
     }
   }
 }
