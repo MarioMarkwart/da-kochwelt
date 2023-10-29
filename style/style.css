@@ -183,8 +183,8 @@ html {
   background-color: green;
   border-style: none;
   border-radius: 10px;
-  padding:15px 70px;
-  color:white;
+  padding: 15px 70px;
+  color: white;
 }
 
 .button-curry:hover {
@@ -285,7 +285,6 @@ p {
 }
 
 .footer-logo-small {
-
   height: 40px;
   width: 40px;
 }
@@ -351,16 +350,16 @@ p {
 
 @media (max-width: 1000px) {
   .margin-side {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 35px;
+    margin-right: 35px;
   }
 
   .content-header {
     padding-left: 20px;
   }
   .padding-side {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .nav-head {
@@ -368,6 +367,10 @@ p {
   }
   .padding-footer {
     padding-right: 20px;
+  }
+
+  .footer-content {
+    justify-content: space-around;
   }
 }
 
@@ -466,9 +469,12 @@ p {
   .img-footer {
     width: 90%;
   }
+  .footer-start {
+    display: none;
+  }
 }
 
-/* 850px */
+/* 750px */
 
 @media (max-width: 750px) {
   .nav-bar {
@@ -492,9 +498,6 @@ p {
 /* 560px */
 
 @media (max-width: 560px) {
-  .footer-start {
-    display: none;
-  }
   .footer-content {
     justify-content: center;
   }
