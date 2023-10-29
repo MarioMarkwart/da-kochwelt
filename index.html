@@ -16,65 +16,25 @@
       href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="script.js"></script>
+    
     <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="6d72b8fd-4d2d-4b84-8d81-7abf4c20cdd7"
-      data-blockingmode="auto"
-      type="text/javascript"
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="6d72b8fd-4d2d-4b84-8d81-7abf4c20cdd7"
+    data-blockingmode="auto"
+    type="text/javascript"
     ></script>
-    <script src="script.js"></script>
+
 
     <link rel="icon" type="image/png" href="./img/logo_small.png" />
     <title>Kochwelt</title>
   </head>
-  <body>
-    <nav class="navigation" id="top">
-      <div class="nav-head margin-side">
-        <a href="#"
-          ><img class="nav-img" src="./img/logo.png" alt="Kochwelt-Logo"
-        /></a>
+  <body onload='includeHTML()'>
+    
+    <!-- Header -->
+    <nav w3-include-html="./templates/header.html"></nav>
 
-        <!-- BURGER MENU-->
-
-        <div onclick="dialogRemove()" id="dialog" class="dialog-bg d-none">
-          <div 
-          class="dialog" id="burger-dialog"
-          >
-            <div class="burger-menu">
-              <img
-                src="./img/icons/burger-close.svg"
-                onclick="dialogRemove()"
-                class="burger-close"
-                id="menu-button"
-              />
-              <a href="./index.html" class="burger-menu-links">Startseite</a>
-              <a href="./daily_reciept.html" class="burger-menu-links"
-                >Rezept des Tages</a
-              >
-              <a href="./kontakt.html" class="burger-menu-links">Kontakt</a>
-              <a href="./impress.html" class="burger-menu-links">Impressum</a>
-              <a href="./privacy.html" class="burger-menu-links">Datenschutz</a>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./img/icons/burger.svg"
-          onclick="dialogShow()"
-          class="burger-none nav-img-burger"
-          id="menu-button"
-        />
-
-        <!-- ENDE BURGER MENU -->
-
-        <div class="nav-bar">
-          <a href="#" class="nav-link">Start</a>
-          <a href="./daily_reciept.html" class="nav-link">Rezept des Tages</a>
-          <a href="./kontakt.html" class="nav-link">Kontakt</a>
-          <a href="./impress.html" class="nav-link">Impressum</a>
-        </div>
-      </div>
-    </nav>
     <section class="margin-side padding-topbot">
       <div class="curry-content">
         <img class="img-curry" src="./img/currywurst.jpeg" alt="currywurst" />
@@ -143,51 +103,6 @@
       </div>
     </section>
 
-    <footer class="footer padding-topbot">
-      <div class="footer-content margin-side">
-        <div class="footer-start">
-          <img src="./img/icons/c.png" class="c-icon" /> Mario Markwart, Lukas
-          Nolting
-        </div>
-
-      
-        <a href="./privacy.html" class="footer-link">Datenschutz</a>
-
-        <div class="footer-icons">
-          <a href="www.facebook.com"
-            ><img
-              src="./img/icons/facebook.png"
-              alt="facebook"
-              class="footer-icon"
-          /></a>
-          <a href="www.twitter.com"
-            ><img
-              src="./img/icons/twitter.png"
-              alt="facebook"
-              class="footer-icon"
-          /></a>
-          <a href="www.instagram.com"
-            ><img
-              src="./img/icons/instagram.webp"
-              alt="facebook"
-              class="footer-icon"
-          /></a>
-          <a href="#top">
-            <img
-              src="./img/logo_small_arrow_above.png"
-              alt="logo klein"
-              class="footer-icon logo-small-d-none"
-            />
-          </a>
-        </div>
-        <a href="#top">
-          <img
-            src="./img/logo_small_arrow_above.png"
-            alt="logo klein"
-            class="footer-logo-small logo-small-d-none-media"
-          />
-        </a>
-      </div>
-    </footer>
+    <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

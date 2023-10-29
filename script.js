@@ -1,3 +1,20 @@
+/* --- header and footer --- */
+async function includeHTML() {
+  console.log("HIER BIN ICH!!!!!!!");
+  let includeElements = document.querySelectorAll('[w3-include-html]');
+  for (let i = 0; i < includeElements.length; i++) {
+    const element = includeElements[i];
+    file = element.getAttribute("w3-include-html"); // "includes/header.html"
+    let resp = await fetch(file);
+    if (resp.ok) {
+      element.innerHTML = await resp.text();
+    } else {
+      element.innerHTML = 'Page not found';
+    }
+  }
+}
+
+/* --- Submit on contact page --- */
 function sendMail(event) {
   event.preventDefault();
   const data = new FormData(event.target);
@@ -17,6 +34,7 @@ function sendMail(event) {
     });
 }
 
+/* --- calculate amount-values on recipes --- */
 let originAmounts = [];
 function getInputAmount() {
   //get the value of inputfield
@@ -48,7 +66,7 @@ function getInputAmount() {
     }
   }
 }
-
+/* --- check if value is numeric for calculation in recipe--- */
 /* https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number */
 function isNumeric(str) {
   if (typeof str != "string") {
@@ -58,8 +76,7 @@ function isNumeric(str) {
   }
 }
 
-// BURGER MENU
-
+/* --- BURGER MENU --- */
 function dialogShow() {
   document.getElementById("dialog").classList.remove("d-none");
 }
