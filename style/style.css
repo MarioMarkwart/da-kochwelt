@@ -284,6 +284,12 @@ p {
   gap: 5px;
 }
 
+.footer-logo-small {
+
+  height: 40px;
+  width: 40px;
+}
+
 .c-icon {
   height: 16px;
   width: auto;
