@@ -8,6 +8,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #008000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #008000;
+}
+
 .navigation {
   box-shadow: 6px 4px 6px rgba(17, 3, 3, 0.14);
   top: 0;
