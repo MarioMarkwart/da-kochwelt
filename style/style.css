@@ -100,7 +100,7 @@ html {
   background-color: white;
   border: 1px solid lightgray;
   padding: 24px;
-  height: 200px;
+  height: 230px;
   width: 20%;
   min-width: 140px;
   border-bottom-left-radius: 15px;
@@ -131,6 +131,7 @@ html {
 
 .burger-close {
   height: 30px;
+  padding-left: 80px;
 }
 
 .burger-close:hover {
@@ -263,8 +264,8 @@ p {
 .footer {
   box-shadow: 0px 6px 4px 6px rgba(17, 3, 3, 0.14);
   bottom: 0;
-  top:100%;
-  left:0;
+  top: 100%;
+  left: 0;
   right: 0;
 }
 
@@ -312,11 +313,11 @@ p {
   width: 40px;
 }
 
-.logo-small-d-none-media{
+.logo-small-d-none-media {
   display: block;
 }
 
-.logo-small-d-none{
+.logo-small-d-none {
   display: none;
 }
 
@@ -524,6 +525,10 @@ p {
     display: inherit;
     height: 50px;
   }
+
+  .burger-close{
+    height: 40px;
+  }
 }
 
 /* 560px */
@@ -536,17 +541,17 @@ p {
     gap: 50px;
   }
 
-.logo-small-d-none-media{
-  display: none;
-}
+  .logo-small-d-none-media {
+    display: none;
+  }
 
-.logo-small-d-none{
-  display: block;
-}
+  .logo-small-d-none {
+    display: block;
+  }
 
-.footer-logo-small{
-  display: none;
-}
+  .footer-logo-small {
+    display: none;
+  }
 }
 
 /* 430px */
@@ -576,80 +581,103 @@ p {
     height: 40px;
   }
 
-  .footer-icons{justify-content: space-around;
-  margin:0 20px;
-gap:25px;}
+.burger-close {
+  height: 30px;
+  padding-left: 90px;
+  padding-top: 5px;
+}
+
+  .footer-icons {
+    justify-content: space-around;
+    margin: 0 20px;
+    gap: 25px;
+  }
 }
 
 @media (min-height: 1290px) {
+  body {
+    height: 100vh; /* 100% der Bildschirmhöhe */
+    margin: 0; /* Rand auf null setzen */
+    padding: 0; /* Innenabstand auf null setzen */
+  }
+  .navigation {
+    height: 10%;
+  }
+  .grey-section {
+    height: 0;
+  }
+  section {
+    height: 25% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer {
+    height: 6%;
+    align-items: center;
+  }
 
-body{  height: 100vh; /* 100% der Bildschirmhöhe */
-  margin: 0; /* Rand auf null setzen */
-  padding: 0; /* Innenabstand auf null setzen */}
-.navigation{height: 10%;}
-.grey-section{height: 0;}
-section{height: 25% !important;
-display: flex;
-flex-direction: column;
-justify-content: center;}
-.footer{height: 6%;
-align-items: center;}
-
-.footer-content{
-
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  gap:40px;
-align-items: center;}
-
-
-
-}
-
- @media (min-width: 2000px) {
-
-  .navigation{
+  .footer-content {
     display: flex;
     align-items: center;
-    
+    text-align: center;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
   }
-  .nav-head{
+}
+
+@media (min-width: 2000px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .nav-head {
     width: 100%;
   }
 
-  .margin-side{margin:0 550px;}
-  .padding-side{padding: 0 550px;}
-  section{height: 25.55% !important;}
+  .margin-side {
+    margin: 0 550px;
+  }
+  .padding-side {
+    padding: 0 550px;
+  }
+  section {
+    height: 25.55% !important;
+  }
+}
 
-} 
-
-@media (max-width: 960px) and (min-height: 1290px){
-
-body{  height: 100vh; /* 100% der Bildschirmhöhe */
-  margin: 0; /* Rand auf null setzen */
-  padding: 0; /* Innenabstand auf null setzen */}
-.navigation{height: 6%;}
-.grey-section{height: 0;}
-section{height: 25% !important;
-display: flex;
-flex-direction: column;
-justify-content: center;}
-.footer{height: 3%;
-align-items: center;}
-.grey-section{height: 45% !important;}
-.footer-content{
-
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  gap:40px;
-align-items: center;}
-
-
-
+@media (max-width: 960px) and (min-height: 1290px) {
+  body {
+    height: 100vh; /* 100% der Bildschirmhöhe */
+    margin: 0; /* Rand auf null setzen */
+    padding: 0; /* Innenabstand auf null setzen */
+  }
+  .navigation {
+    height: 6%;
+  }
+  .grey-section {
+    height: 0;
+  }
+  section {
+    height: 25% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer {
+    height: 3%;
+    align-items: center;
+  }
+  .grey-section {
+    height: 45% !important;
+  }
+  .footer-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+  }
 }

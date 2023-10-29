@@ -67,3 +67,12 @@ function dialogShow() {
 function dialogRemove() {
   document.getElementById("dialog").classList.add("d-none");
 }
+
+// function imgreplace() {
+//   document.getElementById("menu-button").innerHTML = `<img
+//                 src="./img/icons/burger-close.svg"
+//                 onclick="dialogRemove()"
+//                 class="burger-close"
+//                 id="menu-button"
+//               />`
+// }
