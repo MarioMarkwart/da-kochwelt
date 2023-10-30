@@ -45,6 +45,7 @@ function getInputAmount() {
   if (inputAmount < 1) {
     document.getElementById('ing-input').value = inputAmountSave;
     inputAmount = inputAmountSave;
+    alert("Bitte gib eine valide Zahl ein.")
   }
   else {
     inputAmountSave = inputAmount;
