@@ -6,7 +6,7 @@
   font-weight: 300;
 }
 
-.daily-cred {
+.rec-cred {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -16,38 +16,32 @@
   border-radius: 15px;
 }
 
-.daily-head {
+.rec-head {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
 }
 
-.daily-head-cred {
+.rec-head-cred {
   display: flex;
   gap: 15px;
   margin: 25px 0;
 }
 
-.daily-head-icon {
+.rec-head-icon {
   width: 15px;
 }
 
-.daily-head-img {
+.rec-head-img {
   overflow: hidden;
   width: 100%;
-  height: 250px;
+  height: 150px;
   background-size: cover;
   background-position: center;
   object-fit: cover;
   border-radius: 15px;
 }
 
-.daily-ing {
-  border-top: 2px solid #efefef;
-  height: 10px;
-}
-
-.daily-margin {
+.rec-margin {
   margin: 0 180px 0 180px;
 }
 
@@ -76,8 +70,7 @@
 .ing-amount-port {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  height: 30px;
+  height: 100%;
 }
 
 .ing-button {
@@ -92,13 +85,13 @@
 }
 
 .ing-input {
-  height: 100%;
   margin-left: 15px;
   border: 2px solid #efefef;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 120px;
-  padding-left: 10px;
+  padding-left: 12px;
+  height: 29.5px;
 }
 
 .ingredient-odd {
@@ -125,6 +118,94 @@
   border-width: 1px;
 }
 
+.rec-amount {
+  display: flex;
+}
+
 .recp-text {
   margin-bottom: 25px;
+}
+
+/* 690px */
+
+@media (max-width: 690px) {
+  .ing-amount-port {
+    justify-content: center;
+  }
+}
+
+/* 520px */
+
+@media (max-width: 520px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+/* 460px */
+
+@media (max-width: 460px) {
+  .ing-amount-port {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .ing-input {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    margin-left: 0;
+  }
+
+  .sec-ing {
+    font-size: 14px;
+  }
+
+  .autor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .rec-head-cred {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+/* 390px */
+
+@media (max-width: 390px) {
+  .rec-amount {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .ing-input {
+    width: 70px;
+  }
+
+  .ing-amount-port {
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .margin-side {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
