@@ -1,6 +1,8 @@
 .container-contact {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 102px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .footer {
@@ -22,7 +24,7 @@
 
 .contact-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-radius: 15px;
   background-color: #f2f1f1;
 }
@@ -30,8 +32,6 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  height: 80%;
   justify-content: space-between;
 }
 
@@ -78,5 +78,6 @@
 iframe {
   width: 600px;
   height: 450px;
-  border:none;
+  border: none;
+    border-radius: 15px;
 }
