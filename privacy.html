@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Datenschutzerklärung</title>
   </head>
-  <body>
+  <body onload='includeHTML()'>
+    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
     <p>
       <strong>Datenschutz</strong><br /><br />
       Die Nutzung unserer Webseite ist in der Regel ohne Angabe
@@ -31,5 +34,6 @@
     <a href="https://www.kanzlei-hasselbach.de/"
       >Kanzlei Hasselbach, Rechtsanwälte für Arbeitsrecht und Familienrecht</a
     >
+    <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

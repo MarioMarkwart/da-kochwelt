@@ -33,45 +33,49 @@ function sendMail(event) {
     });
 }
 
+
 /* --- calculate amount-values on recipes --- */
 let originAmounts = [];
+let inputAmountSave = 4;
+
 function getInputAmount() {
   //get the value of inputfield
   let inputAmount = document.getElementById("ing-input").value;
-  
+
   if (inputAmount < 1) {
-    document.getElementById('ing-input').value = 1;
-    inputAmount = 1;
+    document.getElementById('ing-input').value = inputAmountSave;
+    inputAmount = inputAmountSave;
   }
   else {
-    console.log(`Zutaten für: ${inputAmount}`);
+    inputAmountSave = inputAmount;
+  }
 
-    // find all classes with 'ing-amount'
-    let amounts = document.getElementsByClassName("ing-amount");
+  // find all classes with 'ing-amount'
+  let amounts = document.getElementsByClassName("ing-amount");
 
-    //saving the original amount-values only on the first run
-    if (originAmounts.length == 0) {
-      for (let i = 0; i < amounts.length; i++) {
-        originAmounts.push(amounts[i].innerHTML);
-      }
-    }
-    //iterate through the array
+  //saving the original amount-values only on the first run
+  if (originAmounts.length == 0) {
     for (let i = 0; i < amounts.length; i++) {
-      console.log("origin: " + originAmounts[i]);
+      originAmounts.push(amounts[i].innerHTML);
+    }
+  }
+  
+  //iterate through the array
+  for (let i = 0; i < amounts.length; i++) {
+    //reset the actual to the original value to calculate with it
+    amounts[i].innerHTML = originAmounts[i];
 
-      //reset the actual to the original value to calculate with it
-      amounts[i].innerHTML = originAmounts[i];
-
-      //the resetet value can be multiplied with the inputAmount
-      //if amount gets zero
-      if (isNumeric(amounts[i].innerHTML)) {
-        amounts[i].innerHTML =
-          Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
-        console.log("amounts: " + amounts[i].innerHTML);
-      }
+    //the resetet value can be multiplied with the inputAmount
+    //if amount gets zero
+    if (isNumeric(amounts[i].innerHTML)) {
+      amounts[i].innerHTML =
+        Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
+      console.log("amounts: " + amounts[i].innerHTML);
     }
   }
 }
+
+
 /* --- check if value is numeric for calculation in recipe--- */
 /* https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number */
 function isNumeric(str) {

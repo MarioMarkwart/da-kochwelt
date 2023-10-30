@@ -28,51 +28,9 @@
     <title>Kochwelt</title>
   </head>
 
-  <body>
-    <nav class="navigation" id="top">
-      <div class="nav-head margin-side">
-        <a href="./index.html"
-          ><img class="nav-img" src="./img/logo.png" alt="Kochwelt-Logo"
-        /></a>
-
-        <!-- BURGER MENU-->
-
-        <div onclick="dialogRemove()" id="dialog" class="dialog-bg d-none">
-          <div class="dialog">
-            <div class="burger-menu">
-              <a href="./index.html" class="burger-menu-links">Startseite</a>
-              <a href="./daily_reciept.html" class="burger-menu-links"
-                >Rezept des Tages</a
-              >
-              <a href="./kontakt.html" class="burger-menu-links">Kontakt</a>
-              <a href="./impress.html" class="burger-menu-links">Impressum</a>
-              <a href="./privacy.html" class="burger-menu-links">Datenschutz</a>
-            </div>
-            <img
-              src="./img/icons/burger-close.svg"
-              onclick="dialogRemove()"
-              class="burger-close"
-              id="menu-button"
-            />
-          </div>
-        </div>
-        <img
-          src="./img/icons/burger.svg"
-          onclick="dialogShow()"
-          class="burger-none nav-img-burger"
-          id="menu-button"
-        />
-
-        <!-- ENDE BURGER MENU -->
-
-        <div class="nav-bar">
-          <a href="./index.html" class="nav-link">Start</a>
-          <a href="./daily_reciept.html" class="nav-link">Rezept des Tages</a>
-          <a href="./kontakt.html" class="nav-link">Kontakt</a>
-          <a href="./impress.html" class="nav-link">Impressum</a>
-        </div>
-      </div>
-    </nav>
+  <body onload='includeHTML()'>
+    
+    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
 
     <div class="daily-head">
       <h1>Griechischer Bauernsalat</h1>
@@ -162,45 +120,6 @@
       </div>
     </section>
 
-    <footer class="footer padding-topbot">
-      <div class="footer-content margin-side">
-        <a href="#top">
-          <img
-            src="./img/logo_small.png"
-            alt="logo klein"
-            class="footer-logo-small"
-          />
-        </a>
-
-        <div class="footer-start">
-          <img src="./img/icons/c.png" class="c-icon" /> Mario Markwart, Lukas
-          Nolting
-        </div>
-
-        <a href="./impress.html" class="footer-link">Impressum</a>
-        <a href="./privacy.html" class="footer-link">Datenschutz</a>
-
-        <div class="footer-icons">
-          <a href="www.facebook.com"
-            ><img
-              src="./img/icons/facebook.png"
-              alt="facebook"
-              class="footer-icon"
-          /></a>
-          <a href="www.twitter.com"
-            ><img
-              src="./img/icons/twitter.png"
-              alt="facebook"
-              class="footer-icon"
-          /></a>
-          <a href="www.instagram.com"
-            ><img
-              src="./img/icons/instagram.webp"
-              alt="facebook"
-              class="footer-icon"
-          /></a>
-        </div>
-      </div>
-    </footer>
+    <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

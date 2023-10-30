@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="script.js"></script>
+    
+
+    <title>Impressum</title>
   </head>
-  <body>
+  <body onload='includeHTML()'>
+    
+    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
+
     <div class="impressum">
       <h1>Impressum</h1>
       <p>Angaben gemäß § 5 TMG</p>
@@ -84,5 +91,6 @@
         >Kanzlei Hasselbach, Rechtsanwälte für Arbeitsrecht und Familienrecht</a
       >
     </div>
+    <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

@@ -23,7 +23,8 @@
     <title>Mail erfolgreich versendet!</title>
   </head>
 
-  <body>
+  <body onload='includeHTML()'>
+    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
     <div class="contact-submitted">
       <div>
         Vielen Dank für Ihre Nachricht!<br /><br />Wir werden Sie
@@ -33,20 +34,6 @@
         <a href="./index.html" class="link">Zurück zur Hauptseite</a>
       </button>
     </div>
-    <div class="footer">
-      <img src="./img/logo.png" alt="Logo" class="footer-img" />
-      <div>(c) by Mario Markwart, Lukas Nolting</div>
-      <div class="footer-icons">
-        <a href="www.facebook.com"
-          ><img src="./img/facebook.png" alt="facebook" class="footer-icon"
-        /></a>
-        <a href="www.twitter.com"
-          ><img src="./img/twitter.png" alt="facebook" class="footer-icon"
-        /></a>
-        <a href="www.instagram.com"
-          ><img src="./img/instagram.webp" alt="facebook" class="footer-icon"
-        /></a>
-      </div>
-    </div>
+    <footer w3-include-html="./templates/footer.html"></footer>
   </body>
 </html>

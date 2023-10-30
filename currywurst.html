@@ -23,25 +23,14 @@
 
     <!-- Script einbinden  -->
     <script src="script.js"></script>
+    
 
     <link rel="icon" type="image/png" href="./img/logo_small.png" />
     <title>Currywurst</title>
   </head>
 
-  <body>
-    <nav class="navigation">
-      <div class="nav-head">
-        <a href="./index.html"
-          ><img class="nav-img" src="./img/logo.png" alt="Kochwelt-Logo"
-        /></a>
-        <div class="nav-bar">
-          <a href="./index.html" class="nav-link">Start</a>
-          <a href="./daily_reciept.html" class="nav-link">Rezept des Tages</a>
-          <a href="./kontakt.html" class="nav-link">Kontakt</a>
-          <a href="#" class="nav-link">Impressum</a>
-        </div>
-      </div>
-    </nav>
+  <body onload='includeHTML()'>
+    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
 
     <div class="daily-head daily-margin">
       <h1>Currywurst</h1>
@@ -196,21 +185,9 @@
           <div>Lukas</div>
         </div>
       </section>
-      <div class="footer">
-        <img src="./img/logo.png" alt="Logo" class="footer-img" />
-        <div>(c) by Mario Markwart, Lukas Nolting</div>
-        <div class="footer-icons">
-          <a href="www.facebook.com"
-            ><img src="./img/facebook.png" alt="facebook" class="footer-icon"
-          /></a>
-          <a href="www.twitter.com"
-            ><img src="./img/twitter.png" alt="facebook" class="footer-icon"
-          /></a>
-          <a href="www.instagram.com"
-            ><img src="./img/instagram.webp" alt="facebook" class="footer-icon"
-          /></a>
-        </div>
-      </div>
+
+      <footer w3-include-html="./templates/footer.html"></footer>
+
     </div>
   </body>
 </html>
