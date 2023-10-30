@@ -1,3 +1,12 @@
+.container-contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.footer {
+  bottom: 0;
+}
+
 .contact-input::placeholder {
   font-family: "Raleway";
 }
@@ -13,13 +22,8 @@
 
 .contact-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  width: 500px;
-  margin: auto;
+  justify-content: space-around;
   border-radius: 15px;
-  margin-top: 80px;
   background-color: #f2f1f1;
 }
 
@@ -65,15 +69,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
   flex-direction: column;
-  height: 500px;
-  width: 500px;
-  margin: auto;
   border-radius: 15px;
-  margin-top: 80px;
   background-color: #f2f1f1;
   text-align: center;
 }
 
-
+iframe {
+  width: 600px;
+  height: 450px;
+  border:none;
+}

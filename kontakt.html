@@ -1,77 +1,89 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/kontakt.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style/style.css" />
-  <link rel="stylesheet" href="./style/kontakt.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <script src="./script.js"></script>
+    <link rel="icon" type="image/png" href="./img/logo_small.png" />
+    <title>Kontakt</title>
+  </head>
 
-  <link rel="icon" type="image/png" href="./img/logo_small.png" />
-  <title>Kontakt</title>
-</head>
+  <body onload="includeHTML()">
+    <nav w3-include-html="./templates/header.html" class="navigation"></nav>
 
-<body onload='includeHTML()'>
-  <nav class="navigation">
-    <div class="nav-head">
-      <a href="./index.html"><img class="nav-img" src="./img/logo.png" alt="Kochwelt-Logo" /></a>
-      <div class="nav-bar">
-        <a href="./index.html" class="nav-link">Start</a>
-        <a href="./daily_reciept.html" class="nav-link">Rezept des Tages</a>
-        <a href="#" class="nav-link">Kontakt</a>
-        <a href="#" class="nav-link">Impressum</a>
+    <div class="container-contact">
+      
+      <div class="contact-card margin-side padding-topbot">
+        <div>
+        <form onsubmit="sendMail(event)" class="contact-form">
+          <label class="contact-label">
+            <div class="contact-text">Deine E-Mail Adresse</div>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-Mail eingeben..."
+              class="contact-input"
+              required
+            />
+          </label>
+          <label class="contact-label" id="dropdown">
+            <div>Wähle eine Kategorie:</div>
+            <select name="categories" id="dropdown">
+              <option value="auswahl">-bitte auswählen-</option>
+              <option value="kontaktanfragen">Kontaktanfragen</option>
+              <option value="rezeptanfragen">Rezeptanfragen</option>
+              <option value="technischeunterstuetzung">
+                Technische Unterstützung
+              </option>
+            </select>
+          </label>
+          <label class="contact-label">
+            <div>Deine Nachricht</div>
+            <textarea
+              name="message"
+              placeholder="Nachricht eingeben..."
+              class="contact-textarea"
+            ></textarea>
+          </label>
+          <label class="contact-label-data"
+            ><input type="checkbox" name="Datenschutz" required />
+            <div class="contact-agree-data">
+              Hiermit stimme ich den
+              <a href="./index.html" target="_blank">Datenschutzbestimmungen</a>
+              zu.
+            </div>
+          </label>
+
+          <!-- <div class="submit-flex"> -->
+          <div class="submit-flex">
+            <button type="submit" class="ing-button">Senden</button>
+          </div>
+          <!-- </div> -->
+        </form></div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427326.418264467!2d5.213395999496963!3d53.54998475234186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b9f36d162924ad%3A0x249c3b2f78f69efa!2sKochwelt!5e0!3m2!1sde!2sde!4v1698692639723!5m2!1sde!2sde"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
-  </nav>
 
-  <div class="contact-card">
-    <form onsubmit="sendMail(event)" class="contact-form">
-      <label class="contact-label">
-        <div class="contact-text">Deine E-Mail Adresse</div>
-        <input type="email" name="email" placeholder="E-Mail eingeben..." class="contact-input" required />
-      </label>
-      <label class="contact-label" id="dropdown">
-        <div> Wähle eine Kategorie: </div>
-        <select name="categories" id="dropdown">
-          <option value="auswahl">-bitte auswählen-</option>
-          <option value="kontaktanfragen">Kontaktanfragen</option>
-          <option value="rezeptanfragen">Rezeptanfragen</option>
-          <option value="technischeunterstuetzung">Technische Unterstützung</option>
-        </select>
-      </label>
-      <label class="contact-label">
-        <div>Deine Nachricht</div>
-        <textarea name="message" placeholder="Nachricht eingeben..." class="contact-textarea"></textarea>
-      </label>
-      <label class="contact-label-data"><input type="checkbox" name="Datenschutz" required />
-        <div class="contact-agree-data">
-          Hiermit stimme ich den
-          <a href="./index.html" target="_blank">Datenschutzbestimmungen</a>
-          zu.
-        </div>
-      </label>
-
-      <!-- <div class="submit-flex"> -->
-      <div class="submit-flex">
-        <button type="submit" class="ing-button">Senden</button>
-      </div>
-      <!-- </div> -->
-    </form>
-  </div>
-
-  <footer w3-include-html="./templates/footer.html"></footer>
-
-</body>
-
+    <footer w3-include-html="./templates/footer.html"></footer>
+  </body>
 </html>
