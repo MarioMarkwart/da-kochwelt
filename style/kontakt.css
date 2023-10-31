@@ -75,7 +75,6 @@
   height: 200px;
   text-align: center;
   align-items: center;
-
 }
 
 .button-sendmail {
@@ -145,10 +144,8 @@
   padding-bottom: 20px;
 }
 
-h2{
-
+h2 {
   padding: 0 0 5px 0;
-
 }
 .contact-textarea {
   border: 1px solid #008000;
@@ -189,12 +186,12 @@ iframe {
   .contact-agree-data {
     text-align: center;
   }
-    input.data-checkbox {
+  input.data-checkbox {
     height: 25px;
     width: 25px;
     margin-left: 10px;
   }
-    .contact-label {
+  .contact-label {
     padding-top: 10px;
     gap: 10px;
   }
@@ -211,7 +208,7 @@ iframe {
   .container-contact {
     padding: 50px 10px 53px 10px;
   }
-    .container-data {
+  .container-data {
     padding: 50px 10px 53px 10px;
   }
 
@@ -232,8 +229,6 @@ iframe {
 /* 440px */
 
 @media (max-width: 440px) {
-
-
   .contact-label-data {
     justify-content: space-between;
   }
