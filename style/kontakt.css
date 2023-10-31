@@ -19,6 +19,15 @@
   align-items: center;
 }
 
+.container-imprint {
+  padding-top: 75px;
+  padding-bottom: 77px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 .footer {
   bottom: 0;
 }
