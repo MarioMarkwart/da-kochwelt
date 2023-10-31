@@ -1,193 +1,152 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/reciept.css" />
 
-    <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/reciept.css" />
 
-    <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
+  <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
 
-    <!-- Script einbinden  -->
-    <script src="script.js"></script>
-    
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <link rel="icon" type="image/png" href="./img/logo_small.png" />
-    <title>Currywurst</title>
-  </head>
+  <script src="script.js"></script>
 
-  <body onload='includeHTML()'>
-    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
+  <link rel="icon" type="image/png" href="./img/favicon.ico" />
+  <title>Currywurst</title>
+</head>
 
-    <div class="daily-head daily-margin">
-      <h1>Currywurst</h1>
-      <div class="box">
-        <div class="rec-curry"></div>
+<body onload="includeHTML()">
+  <nav class="navigation" w3-include-html="./templates/header.html"></nav>
+
+  <section class="rec-head margin-side">
+    <h1 class="padding-topbot">Currywurst</h1>
+    <img src="./img/currywurst.jpeg" class="rec-head-img" />
+    <div class="rec-head-cred">
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />30 Min.
       </div>
-      <div class="daily-head-cred">
-        <div class="daily-cred">
-          <img
-            src="./img/icons/clock-regular.svg"
-            alt="clock"
-            class="daily-head-icon"
-          />30 Min.
-        </div>
-        <div class="daily-cred">
-          <img
-            src="./img/icons/brain-solid.svg"
-            alt="brain"
-            class="daily-head-icon"
-          />simpel
-        </div>
-        <div class="daily-cred">
-          <img
-            src="./img/icons/calendar-alt-regular.svg"
-            alt="brain"
-            class="daily-head-icon"
-          />16.03.2016
-        </div>
+      <div class="rec-cred">
+        <img src="./img/icons/brain-solid.svg" alt="brain" class="rec-head-icon" />simpel
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/calendar-alt-regular.svg" alt="brain" class="rec-head-icon" />16.03.2016
       </div>
     </div>
 
-    <div class="daily-ing daily-margin">
-      <div class="ing-amount-port">
-        <div>Zutaten für</div>
-        <input
-          id="ing-input"
-          class="ing-input"
-          type="number"
-          min="1"
-          max="100"
-          required
-          value="4"
-        />
-
-        <button class="ing-button" onclick="getInputAmount()">Portionen</button>
+    <div class="ing-amount-port">
+      <div>Zutaten für</div>
+      <div class="rec-amount">
+        <input id="ing-input" class="ing-input" type="number" min="1" max="100" required value="4" />
+        <button class="ing-button" onclick="getInputAmount()">
+          Portionen
+        </button>
       </div>
-
-      <!-- class="ing-amount" nur ist zum finden 
-        aller Zutaten-Mengen durch das JS gedacht -->
-      <section class="sec-ing">
-        <div class="ingredient-even">
-          <div class="ing-amount">0.57</div>
-          <div>Liter Cola</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">229</div>
-          <div>ml Orangensaft</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">0.57</div>
-          <div>Dose Tomate(n), fein gehackt</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">1.14</div>
-          <div>Pck. Tomate(n), passierte</div>
-        </div>
-
-        <div class="ingredient-even">
-          <div class="ing-amount">0.57</div>
-          <div>m.-große Zwiebel(n)</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">0.57</div>
-          <div>Zehe/n Knoblauch</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">4</div>
-          <div>EL Curry</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">1.71</div>
-          <div>EL Paprikapulver, edelsüßes</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">0.57</div>
-          <div>EL Honig</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">0.57</div>
-          <div>EL Kräuter (8 Kräutermischung) TK</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">0.57</div>
-          <div>Prise(n) Salz und Pfeffer</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">57.1</div>
-          <div>g Butter</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">0.29</div>
-          <div>Tube/n Tomatenmark</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">1.71</div>
-          <div>Pck. Rostbratwürste</div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Zubereitung</h2>
-        <div class="daily-head-cred">
-          <div class="daily-cred">
-            <img
-              src="./img/icons/clock-regular.svg"
-              alt="clock"
-              class="daily-head-icon"
-            />Arbeitszeit ca. 30 Minuten
-          </div>
-          <div class="daily-cred">
-            <img
-              src="./img/icons/clock-regular.svg"
-              alt="brain"
-              class="daily-head-icon"
-            />Koch-/Backzeit ca. 1 Stunde 30 Minuten
-          </div>
-          <div class="daily-cred">
-            <img
-              src="./img/icons/clock-regular.svg"
-              alt="brain"
-              class="daily-head-icon"
-            />Gesamtzeit ca. 2 Stunden
-          </div>
-        </div>
-
-        <p class="recp-text">
-          Die Zwiebel und Knoblauch in kleine Stücke schneiden und in Butter
-          glasig anbraten, dann etwas Tomatenmark dazugeben und kurz weiter
-          anbraten, das Ganze dann mit Cola ablöschen und auf 1/3 reduzieren.
-          Dann die Tomaten und den O-Saft dazugeben und das Ganze aufkochen
-          lassen. Nun die Kräuter, Curry, Paprika und Honig dazugeben und das
-          Ganze eine gute Stunde köcheln lassen, mit Salz und Pfeffer
-          abschmecken.<br /><br />
-          20 min bevor die Soße fertig ist, die Bratwürste braten, klein
-          schneiden, fertige Soße zugeben, alles zusammen kurz aufkochen und mit
-          Pommes servieren.
-        </p>
-
-        <h3>Rezept erstellt von</h3>
-        <div class="autor-box">
-          <div class="img-autor-lukas"></div>
-          <div>Lukas</div>
-        </div>
-      </section>
-
-      <footer w3-include-html="./templates/footer.html"></footer>
-
     </div>
-  </body>
+  </section>
+
+  <section class="sec-ing margin-side padding-topbot">
+    <div class="ingredient-even">
+      <div class="ing-amount">0.57</div>
+      <div>Liter Cola</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">229</div>
+      <div>ml Orangensaft</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">0.57</div>
+      <div>Dose Tomate(n), fein gehackt</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">1.14</div>
+      <div>Pck. Tomate(n), passierte</div>
+    </div>
+
+    <div class="ingredient-even">
+      <div class="ing-amount">0.57</div>
+      <div>m.-große Zwiebel(n)</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">0.57</div>
+      <div>Zehe/n Knoblauch</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">4</div>
+      <div>EL Curry</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">1.71</div>
+      <div>EL Paprikapulver, edelsüßes</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">0.57</div>
+      <div>EL Honig</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">0.57</div>
+      <div>EL Kräuter (8 Kräutermischung) TK</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">0.57</div>
+      <div>Prise(n) Salz und Pfeffer</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">57.1</div>
+      <div>g Butter</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">0.29</div>
+      <div>Tube/n Tomatenmark</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">1.71</div>
+      <div>Pck. Rostbratwürste</div>
+    </div>
+  </section>
+
+  <section class="margin-side">
+    <h2>Zubereitung</h2>
+    <div class="rec-head-cred">
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />ca. 15 Minuten
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="brain" class="rec-head-icon" />Gesamtzeit ca. 15 Minuten
+      </div>
+    </div>
+
+    <p class="recp-text">
+      Die Zwiebel und Knoblauch in kleine Stücke schneiden und in Butter
+      glasig anbraten, dann etwas Tomatenmark dazugeben und kurz weiter
+      anbraten, das Ganze dann mit Cola ablöschen und auf 1/3 reduzieren.
+      Dann die Tomaten und den O-Saft dazugeben und das Ganze aufkochen
+      lassen. Nun die Kräuter, Curry, Paprika und Honig dazugeben und das
+      Ganze eine gute Stunde köcheln lassen, mit Salz und Pfeffer
+      abschmecken.<br /><br />
+      20 min bevor die Soße fertig ist, die Bratwürste braten, klein
+      schneiden, fertige Soße zugeben, alles zusammen kurz aufkochen und mit
+      Pommes servieren.
+    </p>
+
+    <h3>Rezept erstellt von</h3>
+    <div class="autor-box">
+      <div class="img-autor-lukas"></div>
+      <div>Lukas</div>
+    </div>
+  </section>
+
+  <footer w3-include-html="./templates/footer.html"></footer>
+</body>
+
 </html>
