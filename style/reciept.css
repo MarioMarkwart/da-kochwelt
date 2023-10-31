@@ -135,6 +135,16 @@
   .rec-head-img{
       height: 150px;
   }
+      .rec-head-cred {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    h2 {
+    text-align: center;
+  }
 }
 
 /* 520px */
@@ -143,6 +153,7 @@
   h1 {
     text-align: center;
   }
+
 }
 
 /* 460px */
@@ -169,17 +180,6 @@
     padding-top: 30px;
   }
 
-  .rec-head-cred {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  h2 {
-    text-align: center;
-  }
 }
 
 /* 390px */

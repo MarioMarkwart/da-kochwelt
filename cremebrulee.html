@@ -1,139 +1,182 @@
 <!DOCTYPE html>
 <html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/reciept.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style/style.css" />
-  <link rel="stylesheet" href="./style/reciept.css" />
+    <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
 
-  <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
+    <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
 
-  <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
+    <script src="script.js"></script>
 
-  <script src="script.js"></script>
+    <link rel="icon" type="image/png" href="./img/logo_small.png" />
+    <title>Crème Brûlée</title>
+  </head>
 
-  <link rel="icon" type="image/png" href="./img/logo_small.png" />
-  <title>Crème Brûlée</title>
-</head>
+  <body onload="includeHTML()">
+    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
 
-<body onload="includeHTML()">
-  <nav class="navigation" w3-include-html="./templates/header.html"></nav>
-
-  <section class="rec-head margin-side">
-    <h1 class="padding-topbot">Crème Brûlée</h1>
-    <img src="./img/cremebrulee.jpg" class="rec-head-img" />
-    <div class="rec-head-cred">
-      <div class="rec-cred">
-        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />20 Min.
+    <section class="rec-head margin-side">
+      <h1 class="padding-topbot">Crème Brûlée</h1>
+      <img src="./img/cremebrulee.jpg" class="rec-head-img" />
+      <div class="rec-head-cred">
+        <div class="rec-cred">
+          <img
+            src="./img/icons/clock-regular.svg"
+            alt="clock"
+            class="rec-head-icon"
+          />20 Min.
+        </div>
+        <div class="rec-cred">
+          <img
+            src="./img/icons/brain-solid.svg"
+            alt="brain"
+            class="rec-head-icon"
+          />normal
+        </div>
+        <div class="rec-cred">
+          <img
+            src="./img/icons/calendar-alt-regular.svg"
+            alt="brain"
+            class="rec-head-icon"
+          />18.01.2005
+        </div>
       </div>
-      <div class="rec-cred">
-        <img src="./img/icons/brain-solid.svg" alt="brain" class="rec-head-icon" />normal
+
+      <div class="ing-amount-port">
+        <div>Zutaten für</div>
+        <div class="rec-amount">
+          <input
+            id="ing-input"
+            class="ing-input"
+            type="number"
+            min="1"
+            max="100"
+            required
+            value="4"
+          />
+          <button class="ing-button" onclick="getInputAmount()">
+            Portionen
+          </button>
+        </div>
       </div>
-      <div class="rec-cred">
-        <img src="./img/icons/calendar-alt-regular.svg" alt="brain" class="rec-head-icon" />18.01.2005
+    </section>
+
+    <section class="sec-ing margin-side padding-topbot">
+      <div class="ingredient-even">
+        <div class="ing-amount">400</div>
+        <div>ml Sahne</div>
+      </div>
+      <div class="ingredient-odd">
+        <div class="ing-amount">180</div>
+        <div>ml Vollmilch</div>
+      </div>
+      <div class="ingredient-even">
+        <div class="ing-amount">85</div>
+        <div>g Zucker</div>
+      </div>
+      <div class="ingredient-odd">
+        <div class="ing-amount">5</div>
+        <div>Eigelb</div>
+      </div>
+
+      <div class="ingredient-even">
+        <div class="ing-amount">1</div>
+        <div>Vanilleschote(n), evtl. etwas flüssige Vanilleessenz</div>
+      </div>
+      <div class="ingredient-odd">
+        <div class="ing-amount"></div>
+        <div>Zitronenabrieb</div>
+      </div>
+      <div class="ingredient-even">
+        <div class="ing-amount"></div>
+        <div>Zucker, fein, weiß, zum karamellisieren</div>
+      </div>
+    </section>
+
+    <section class="margin-side">
+      <h2>Zubereitung</h2>
+      <div class="rec-head-cred">
+        <div class="rec-cred">
+          <img
+            src="./img/icons/clock-regular.svg"
+            alt="clock"
+            class="rec-head-icon"
+          />Arbeitszeit ca. 20 Minuten
+        </div>
+        <div class="rec-cred">
+          <img
+            src="./img/icons/clock-regular.svg"
+            alt="clock"
+            class="rec-head-icon"
+          />Ruhezeit ca. 4 Stunden
+        </div>
+        <div class="rec-cred">
+          <img
+            src="./img/icons/clock-regular.svg"
+            alt="clock"
+            class="rec-head-icon"
+          />Koch-/Backzeit ca. 55 Minuten
+        </div>
+        <div class="rec-cred">
+          <img
+            src="./img/icons/clock-regular.svg"
+            alt="brain"
+            class="rec-head-icon"
+          />Gesamtzeit ca. 5 Stunden und 15 Minuten
+        </div>
+      </div>
+
+      <p class="recp-text">
+        Sahne, Milch und Eigelb verquirlen und mit den restlichen Zutaten
+        mischen (niemals den Zucker auf das unverquirlte Eigelb geben, denn das
+        gibt fiese kleine Zucker-Eigelb-Krümelchen die sich nicht mehr
+        vollständig auflösen). Nun alles mind. 30 Minuten ziehen lassen (geht
+        auch über Nacht).
+        <br /><br />
+        In feuerfeste Förmchen füllen (in 4 größere Förmchen für 4 gierige
+        Crème-brulée-Fans, oder in 6 kleinere) und in die Fettpfanne des auf
+        150°C vorgeheizten Backofens auf die mittlere Schiene stellen. Die
+        Fettpfanne bis zum Rand mit kochendem Wasser füllen und die Crème 55
+        Minuten stocken lassen. Die Oberseite wird etwas blasig und braun, macht
+        aber nichts.
+        <br /><br />
+        Die Förmchen auskühlen lassen (die Masse ist direkt aus dem Ofen noch
+        wabbelig, aber das ändert sich, wenn sie kalt ist) und im Kühlschrank
+        mind. 2 Stunden durchkühlen (geht ebenfalls über Nacht). Ich stelle die
+        Crème vor dem Brulieren (Karamellisieren) noch einmal kurz ins Eisfach,
+        damit sie wirklich schön kalt ist.
+        <br /><br />
+        Nun kommt noch die krachige Karamellschicht drauf. Ich verteile dazu auf
+        jedem Förmchen ca. 1 EL feinen, weißen Zucker (man kann auch braunen
+        Zucker nehmen - aber Vorsicht, er verbrennt schneller) und überflamme es
+        langsam und gleichmäßig mit einem Flambierbrenner (Candyman), bis sich
+        eine glatte Schicht gebildet hat. Es soll auch unter dem Backofengrill
+        gehen, aber darüber habe ich keine Erfahrungswerte.
+      </p>
+    </section>
+    <div class="autor">
+      <h3 class="margin-side">Rezept erstellt von</h3>
+      <div class="autor-box margin-side">
+        <div class="img-autor-lukas"></div>
+        <div>Lukas</div>
       </div>
     </div>
 
-    <div class="ing-amount-port">
-      <div>Zutaten für</div>
-      <div class="rec-amount">
-        <input id="ing-input" class="ing-input" type="number" min="1" max="100" required value="4" />
-        <button class="ing-button" onclick="getInputAmount()">
-          Portionen
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec-ing margin-side padding-topbot">
-    <div class="ingredient-even">
-      <div class="ing-amount">400</div>
-      <div>ml Sahne</div>
-    </div>
-    <div class="ingredient-odd">
-      <div class="ing-amount">180</div>
-      <div>ml Vollmilch</div>
-    </div>
-    <div class="ingredient-even">
-      <div class="ing-amount">85</div>
-      <div>g Zucker</div>
-    </div>
-    <div class="ingredient-odd">
-      <div class="ing-amount">5</div>
-      <div>Eigelb</div>
-    </div>
-
-    <div class="ingredient-even">
-      <div class="ing-amount">1</div>
-      <div>Vanilleschote(n), evtl. etwas flüssige Vanilleessenz</div>
-    </div>
-    <div class="ingredient-odd">
-      <div class="ing-amount"></div>
-      <div>Zitronenabrieb</div>
-    </div>
-    <div class="ingredient-even">
-      <div class="ing-amount"></div>
-      <div>Zucker, fein, weiß, zum karamellisieren</div>
-    </div>
-  </section>
-
-  <section class="margin-side">
-    <h2>Zubereitung</h2>
-    <div class="rec-head-cred">
-      <div class="rec-cred">
-        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Arbeitszeit ca. 20 Minuten
-      </div>
-      <div class="rec-cred">
-        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Ruhezeit ca. 4 Stunden
-      </div>
-      <div class="rec-cred">
-        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Koch-/Backzeit ca. 55 Minuten
-      </div>
-      <div class="rec-cred">
-        <img src="./img/icons/clock-regular.svg" alt="brain" class="rec-head-icon" />Gesamtzeit ca. 5 Stunden und 15
-        Minuten
-      </div>
-    </div>
-
-    <p class="recp-text">
-      Sahne, Milch und Eigelb verquirlen und mit den restlichen Zutaten mischen (niemals den Zucker auf das unverquirlte
-      Eigelb geben,
-      denn das gibt fiese kleine Zucker-Eigelb-Krümelchen die sich nicht mehr vollständig auflösen). Nun alles mind. 30
-      Minuten ziehen lassen (geht auch über Nacht).
-      <br><br>
-      In feuerfeste Förmchen füllen (in 4 größere Förmchen für 4 gierige Crème-brulée-Fans, oder in 6 kleinere) und in
-      die Fettpfanne des auf 150°C vorgeheizten Backofens auf die mittlere Schiene stellen.
-      Die Fettpfanne bis zum Rand mit kochendem Wasser füllen und die Crème 55 Minuten stocken lassen. Die Oberseite
-      wird etwas blasig und braun, macht aber nichts.
-      <br><br>
-      Die Förmchen auskühlen lassen (die Masse ist direkt aus dem Ofen noch wabbelig, aber das ändert sich, wenn sie
-      kalt ist) und im Kühlschrank mind. 2 Stunden durchkühlen (geht ebenfalls über Nacht).
-      Ich stelle die Crème vor dem Brulieren (Karamellisieren) noch einmal kurz ins Eisfach, damit sie wirklich schön
-      kalt ist.
-      <br><br>
-      Nun kommt noch die krachige Karamellschicht drauf. Ich verteile dazu auf jedem Förmchen ca. 1 EL feinen, weißen
-      Zucker (man kann auch braunen Zucker nehmen - aber Vorsicht, er verbrennt schneller)
-      und überflamme es langsam und gleichmäßig mit einem Flambierbrenner (Candyman), bis sich eine glatte Schicht
-      gebildet hat. Es soll auch unter dem Backofengrill gehen, aber darüber habe ich keine Erfahrungswerte.
-    </p>
-
-    <h3>Rezept erstellt von</h3>
-    <div class="autor-box">
-      <div class="img-autor-lukas"></div>
-      <div>Lukas</div>
-    </div>
-  </section>
-
-  <footer w3-include-html="./templates/footer.html"></footer>
-</body>
+    <footer w3-include-html="./templates/footer.html"></footer>
+  </body>
 </html>
