@@ -34,7 +34,7 @@
 .rec-head-img {
   overflow: hidden;
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -131,6 +131,9 @@
 @media (max-width: 690px) {
   .ing-amount-port {
     justify-content: center;
+  }
+  .rec-head-img{
+      height: 150px;
   }
 }
 
