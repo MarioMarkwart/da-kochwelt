@@ -27,6 +27,15 @@
   display: flex;
   justify-content: center;
 }
+.container-data {
+  padding-top: 75px;
+  padding-bottom: 77px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 560px;
+  display: flex;
+  justify-content: center;
+}
 
 .footer {
   bottom: 0;
@@ -200,6 +209,9 @@ iframe {
     padding: 30px 30px;
   }
   .container-contact {
+    padding: 50px 10px 53px 10px;
+  }
+    .container-data {
     padding: 50px 10px 53px 10px;
   }
 
