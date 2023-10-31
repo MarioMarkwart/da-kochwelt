@@ -45,6 +45,7 @@
   border: 1px solid #008000;
   border-radius: 10px;
   padding: 8px 20px;
+  font-family: "Raleway";
 }
 
 .contact-label {
@@ -63,8 +64,9 @@
 .contact-textarea {
   border: 1px solid #008000;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   height: 150px;
+  font-family: "Raleway";
 }
 
 .contact-textarea::placeholder {
