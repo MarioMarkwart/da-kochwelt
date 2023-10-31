@@ -70,7 +70,7 @@ function getInputAmount() {
     //if amount gets zero
     if (isNumeric(amounts[i].innerHTML)) {
       amounts[i].innerHTML =
-        Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
+        Math.round(((amounts[i].innerHTML / 4) + Number.EPSILON) * inputAmount * 10) / 10;
       console.log("amounts: " + amounts[i].innerHTML);
     }
   }

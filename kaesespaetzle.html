@@ -20,134 +20,128 @@
     href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
 
-  <!-- Script einbinden  -->
   <script src="script.js"></script>
 
   <link rel="icon" type="image/png" href="./img/logo_small.png" />
-  <title>Kochwelt</title>
+  <title>Käsespätzle</title>
 </head>
 
-<body onload='includeHTML()'>
+<body onload="includeHTML()">
   <nav class="navigation" w3-include-html="./templates/header.html"></nav>
 
-  <div class="daily-head daily-margin">
-    <h1>Käsespätzle</h1>
-    <div class="box">
-      <div class="rec-kaesespaetzle-img"></div>
-    </div>
-    <div class="daily-head-cred">
-      <div class="daily-cred">
-        <img src="./img/icons/clock-regular.svg" alt="clock" class="daily-head-icon" />15 Min.
+  <section class="rec-head margin-side">
+    <h1 class="padding-topbot">Käsespätzle</h1>
+    <img src="./img/kaesespaetzle.jpg" class="rec-head-img" />
+    <div class="rec-head-cred">
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />30 Min.
       </div>
-      <div class="daily-cred">
-        <img src="./img/icons/brain-solid.svg" alt="brain" class="daily-head-icon" />simpel
+      <div class="rec-cred">
+        <img src="./img/icons/brain-solid.svg" alt="brain" class="rec-head-icon" />simpel
       </div>
-      <div class="daily-cred">
-        <img src="./img/icons/calendar-alt-regular.svg" alt="brain" class="daily-head-icon" />26.10.2023
+      <div class="rec-cred">
+        <img src="./img/icons/calendar-alt-regular.svg" alt="brain" class="rec-head-icon" />26.10.2023
       </div>
     </div>
-  </div>
 
-  <div class="daily-ing daily-margin">
     <div class="ing-amount-port">
       <div>Zutaten für</div>
-      <input id="ing-input" class="ing-input" type="number" min="1" max="100" required value="4" />
+      <div class="rec-amount">
+        <input id="ing-input" class="ing-input" type="number" min="1" max="100" required value="4" />
+        <button class="ing-button" onclick="getInputAmount()">
+          Portionen
+        </button>
+      </div>
+    </div>
+  </section>
 
-      <button class="ing-button" onclick="getInputAmount()">Portionen</button>
+  <section class="sec-ing margin-side padding-topbot">
+    <div class="ingredient-even">
+      <div class="ing-amount">400</div>
+      <div>g Mehl</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">4</div>
+      <div>Ei(er)</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">n.B.</div>
+      <div>Mineralwasser, mit Kohlensäure</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">1.5</div>
+      <div>EL Salz</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount"></div>
+      <div>Pfeffer</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount"></div>
+      <div>Muskat</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">100</div>
+      <div>g Bergkäse</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">100</div>
+      <div>g Käse (Bauernkäse)</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">50</div>
+      <div>g Romadur</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">50</div>
+      <div>g Limburger</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">6</div>
+      <div>Zwiebel(n)</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">etwas</div>
+      <div>Butter, zum anbraten</div>
+    </div>
+  </section>
+
+  <section class="margin-side">
+    <h2>Zubereitung</h2>
+    <div class="rec-head-cred">
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Arbeitszeit ca. 35 Minuten
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Koch-/Backzeit ca. 20 Minuten
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="brain" class="rec-head-icon" />Gesamtzeit ca. 55 Minuten
+      </div>
     </div>
 
-
-    <!-- class="ing-amount" nur ist zum finden 
-        aller Zutaten-Mengen durch das JS gedacht -->
-    <section class="sec-ing">
-      <div class="ingredient-even">
-        <div class="ing-amount">400</div>
-        <div>g Mehl</div>
-      </div>
-      <div class="ingredient-odd">
-        <div class="ing-amount">4</div>
-        <div>Ei(er)</div>
-      </div>
-      <div class="ingredient-even">
-        <div class="ing-amount">n.B.</div>
-        <div>Mineralwasser, mit Kohlensäure</div>
-      </div>
-      <div class="ingredient-odd">
-        <div class="ing-amount">1.5</div>
-        <div>EL Salz</div>
-      </div>
-      <div class="ingredient-even">
-        <div class="ing-amount"></div>
-        <div>Pfeffer</div>
-      </div>
-      <div class="ingredient-odd">
-        <div class="ing-amount"></div>
-        <div>Muskat</div>
-      </div>
-      <div class="ingredient-even">
-        <div class="ing-amount">100</div>
-        <div>g Bergkäse</div>
-      </div>
-      <div class="ingredient-odd">
-        <div class="ing-amount">100</div>
-        <div>g Käse (Bauernkäse)</div>
-      </div>
-      <div class="ingredient-even">
-        <div class="ing-amount">50</div>
-        <div>g Romadur</div>
-      </div>
-      <div class="ingredient-odd">
-        <div class="ing-amount">50</div>
-        <div>g Limburger</div>
-      </div>
-      <div class="ingredient-even">
-        <div class="ing-amount">6</div>
-        <div>Zwiebel(n)</div>
-      </div>
-      <div class="ingredient-odd">
-        <div class="ing-amount">etwas</div>
-        <div>Butter, zum anbraten</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Zubereitung</h2>
-      <div class="daily-head-cred">
-        <div class="daily-cred">
-          <img src="./img/icons/clock-regular.svg" alt="clock" class="daily-head-icon" />ca. 15 Minuten
-        </div>
-        <div class="daily-cred">
-          <img src="./img/icons/clock-regular.svg" alt="brain" class="daily-head-icon" />Koch-/Backzeit ca. 20 Minuten
-        </div>
-        <div class="daily-cred">
-          <img src="./img/icons/clock-regular.svg" alt="brain" class="daily-head-icon" />Gesamtzeit ca. 55 Minuten
-        </div>
-      </div>
-
-      <p class="recp-text">
-        Mehl, Eier, etwas Sprudel, Salz, Pfeffer und Muskat verrühren, sodass ein glatter Teig entsteht.
+    <p class="recp-text">
+      Mehl, Eier, etwas Sprudel, Salz, Pfeffer und Muskat verrühren, sodass ein glatter Teig entsteht.
         Den Spätzleteig mit einer Spätzlepresse in kochendes Salzwasser geben und garen, bis sie oben schwimmen.
         Mit dem Kochlöffel umrühren, damit die Spatzen nicht zusammenkleben.
         Wenn die Spatzen an der Oberfläche schwimmen, mit einem Schaumlöffel herausnehmen und gut abtropfen lassen.
-
+        <br><br>
         Den Käse klein schneiden bzw. reiben und miteinander vermischen, danach lagenweise über den Spätzle verteilen.
-
+        <br><br>
         Im Ofen bei 180°C backen, bis der Käse geschmolzen oder die gewünschte Bräune erreicht ist.
-
+        <br><br>
         In der Zwischenzeit die Zwiebeln in feine Streifen schneiden und in einer Pfanne mit Butter langsam braten,
         bis sie richtig knusprig braun sind. Dann auf den fertigen Käsespatzen verteilen.
-      </p>
+    </p>
 
-      <h3>Rezept erstellt von</h3>
-      <div class="autor-box">
-        <div class="img-autor-mario"></div>
-        <div>Mario</div>
-      </div>
-    </section>
+    <h3>Rezept erstellt von</h3>
+    <div class="autor-box">
+      <div class="img-autor-mario"></div>
+      <div>Mario</div>
+    </div>
+  </section>
 
-    <footer w3-include-html="./templates/footer.html"></footer>
-    
-  </div>
+  <footer w3-include-html="./templates/footer.html"></footer>
 </body>
 
 </html>
