@@ -1,165 +1,127 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href="./style/reciept.css" />
 
-    <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet" href="./style/reciept.css" />
 
-    <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
+  <!-- SCHRIFTART ANPASSEN (FRAGEN?) -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <link href="./fonts/static/Raleway-Bold.ttf" rel="stylesheet" />
 
-    <!-- Script einbinden  -->
-    <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <link rel="icon" type="image/png" href="./img/logo_small.png" />
-    <title>Kochwelt</title>
-  </head>
+  <script src="script.js"></script>
 
-  <body onload='includeHTML()'>
-    
-    <nav class="navigation" w3-include-html="./templates/header.html"></nav>
+  <link rel="icon" type="image/png" href="./img/logo_small.png" />
+  <title>Grünkohl</title>
+</head>
 
-    <div class="daily-head daily-margin">
-      <h1>Oldenburger Grünkohl</h1>
-      <div class="box">
-        <div class="rec-gruen"></div>
+<body onload="includeHTML()">
+  <nav class="navigation" w3-include-html="./templates/header.html"></nav>
+
+  <section class="rec-head margin-side">
+    <h1 class="padding-topbot">Grünkohl</h1>
+    <img src="./img/gruenkohl.jpg" class="rec-head-img" />
+    <div class="rec-head-cred">
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />20 Min.
       </div>
-      <div class="daily-head-cred">
-        <div class="daily-cred">
-          <img
-            src="./img/icons/clock-regular.svg"
-            alt="clock"
-            class="daily-head-icon"
-          />20 Min.
-        </div>
-        <div class="daily-cred">
-          <img
-            src="./img/icons/brain-solid.svg"
-            alt="brain"
-            class="daily-head-icon"
-          />normal
-        </div>
-        <div class="daily-cred">
-          <img
-            src="./img/icons/calendar-alt-regular.svg"
-            alt="brain"
-            class="daily-head-icon"
-          />18.06.2012
-        </div>
+      <div class="rec-cred">
+        <img src="./img/icons/brain-solid.svg" alt="brain" class="rec-head-icon" />normal
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/calendar-alt-regular.svg" alt="brain" class="rec-head-icon" />18.06.2012
       </div>
     </div>
 
-    <div class="daily-ing daily-margin">
-      <div class="ing-amount-port">
-        <div>Zutaten für</div>
-        <input
-          id="ing-input"
-          class="ing-input"
-          type="number"
-          min="1"
-          max="100"
-          required
-          value="4"
-        />
-
-        <button class="ing-button" onclick="getInputAmount()">Portionen</button>
+    <div class="ing-amount-port">
+      <div>Zutaten für</div>
+      <div class="rec-amount">
+        <input id="ing-input" class="ing-input" type="number" min="1" max="100" required value="4" />
+        <button class="ing-button" onclick="getInputAmount()">
+          Portionen
+        </button>
       </div>
+    </div>
+  </section>
 
-      <!-- class="ing-amount" nur ist zum finden 
-        aller Zutaten-Mengen durch das JS gedacht -->
-      <section class="sec-ing">
-        <div class="ingredient-even">
-          <div class="ing-amount">0.67</div>
-          <div>EL Griebenschmalz oder Entenschmalz</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">0.67</div>
-          <div>große Zwiebel(n), fein gehackt</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">1</div>
-          <div>kg Grünkohl, TK</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">n.B.</div>
-          <div>Fleischbrühe oder Gemüsebrühe</div>
-        </div>
+  <section class="sec-ing margin-side padding-topbot">
+    <div class="ingredient-even">
+      <div class="ing-amount">0.7</div>
+      <div>EL Griebenschmalz oder Entenschmalz</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">0.7</div>
+      <div>große Zwiebel(n), fein gehackt</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">1</div>
+      <div>kg Grünkohl, TK</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">n.B.</div>
+      <div>Fleischbrühe oder Gemüsebrühe</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">0.7</div>
+      <div>Scheibe/n Bauchspeck</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">4</div>
+      <div>Scheibe/n Kasseler, geräuchert</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">1.3</div>
+      <div>EL Senf</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">4</div>
+      <div>Kochwürste oder Mettenden</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">4</div>
+      <div>Pinkelwürste oder Grützwürste</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">n.B.</div>
+      <div>Salz und Pfeffer</div>
+    </div>
+    <div class="ingredient-even">
+      <div class="ing-amount">0.7</div>
+      <div>Prise(n) Zucker</div>
+    </div>
+    <div class="ingredient-odd">
+      <div class="ing-amount">0.7</div>
+      <div>Handvoll Haferflocken oder Hafergrütze</div>
+    </div>
+  </section>
 
-        <div class="ingredient-even">
-          <div class="ing-amount">0.67</div>
-          <div>Scheibe/n Bauchspeck</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">4</div>
-          <div>Scheibe/n Kasseler, geräuchert</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">1.33</div>
-          <div>EL Senf</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">4</div>
-          <div>Kochwürste oder Mettenden</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">4</div>
-          <div>Pinkelwürste oder Grützwürste</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">n.B.</div>
-          <div>Salz und Pfeffer</div>
-        </div>
-        <div class="ingredient-even">
-          <div class="ing-amount">0.67</div>
-          <div>Prise(n) Zucker</div>
-        </div>
-        <div class="ingredient-odd">
-          <div class="ing-amount">0.67</div>
-          <div>Handvoll Haferflocken oder Hafergrütze</div>
-        </div>
-      </section>
+  <section class="margin-side">
+    <h2>Zubereitung</h2>
+    <div class="rec-head-cred">
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Arbeitszeit ca. 20 Minuten
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="clock" class="rec-head-icon" />Koch-/Backzeit ca. 1 Stunde und 45 Minuten
+      </div>
+      <div class="rec-cred">
+        <img src="./img/icons/clock-regular.svg" alt="brain" class="rec-head-icon" />Gesamtzeit ca. 2 Stunden und 5 Minuten
+      </div>
+    </div>
 
-      <section>
-        <h2>Zubereitung</h2>
-        <div class="daily-head-cred">
-          <div class="daily-cred">
-            <img
-              src="./img/icons/clock-regular.svg"
-              alt="clock"
-              class="daily-head-icon"
-            />Arbeitszeit ca. 20 Minuten
-          </div>
-          <div class="daily-cred">
-            <img
-              src="./img/icons/clock-regular.svg"
-              alt="brain"
-              class="daily-head-icon"
-            />Koch-/Backzeit ca. 1 Stunde 45 Minuten
-          </div>
-          <div class="daily-cred">
-            <img
-              src="./img/icons/clock-regular.svg"
-              alt="brain"
-              class="daily-head-icon"
-            />Gesamtzeit ca. 2 Stunden 5 Minuten
-          </div>
-        </div>
-
-        <p class="recp-text">
-          Schmalz in einem großen Kochtopf flüssig werden lassen und die fein
+    <p class="recp-text">
+      Schmalz in einem großen Kochtopf flüssig werden lassen und die fein
           gehackte Zwiebel darin andünsten. Dann den Grünkohl darauf geben und
           so viel Brühe angießen, dass der Kohl im Topf gerade bedeckt ist. Den
           Kohl mindestens 60 Minuten köcheln lassen. Ab und an umrühren, evtl.
@@ -177,17 +139,16 @@
           Dazu passen Salzkartoffeln.<br /><br />
 
           Anmerkung: Vielen Oldenburgern schmecken auch Bratkartoffeln dazu.
-        </p>
+    </p>
 
-        <h3>Rezept erstellt von</h3>
-        <div class="autor-box">
-          <div class="img-autor-lukas"></div>
-          <div>Lukas</div>
-        </div>
-      </section>
-      
-      <footer w3-include-html="./templates/footer.html"></footer>
-
+    <h3>Rezept erstellt von</h3>
+    <div class="autor-box">
+      <div class="img-autor-lukas"></div>
+      <div>Lukas</div>
     </div>
-  </body>
+  </section>
+
+  <footer w3-include-html="./templates/footer.html"></footer>
+</body>
+
 </html>
