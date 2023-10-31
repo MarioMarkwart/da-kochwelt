@@ -71,7 +71,6 @@ function getInputAmount() {
     if (isNumeric(amounts[i].innerHTML)) {
       amounts[i].innerHTML =
         Math.round((amounts[i].innerHTML / 4) * inputAmount * 100) / 100;
-      console.log("amounts: " + amounts[i].innerHTML);
     }
   }
 }
