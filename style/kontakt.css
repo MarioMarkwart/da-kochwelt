@@ -1,6 +1,6 @@
 .container-contact {
-  padding-top: 100px;
-  padding-bottom: 102px;
+  padding-top: 75px;
+  padding-bottom: 77px;
   padding-left: 30px;
   padding-right: 30px;
   display: flex;
@@ -79,16 +79,23 @@
 .contact-label {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
+  padding: 0 0 20px 0;
 }
 
 .contact-label-data {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
+  padding-bottom: 20px;
 }
 
+h2{
+
+  padding: 0 0 5px 0;
+
+}
 .contact-textarea {
   border: 1px solid #008000;
   border-radius: 10px;
@@ -113,7 +120,7 @@
 
 iframe {
   width: 400px;
-  height: 450px;
+  height: 100%;
   border: none;
   border-radius: 15px;
 }
@@ -133,7 +140,6 @@ iframe {
     width: 25px;
     margin-left: 10px;
   }
-  .contact-label-data{padding: 10px 0;}
     .contact-label {
     padding-top: 10px;
     gap: 10px;
@@ -160,8 +166,9 @@ iframe {
     padding-top: 10px;
   }
   .contact-label-data {
-    padding: 20px 0 10px 0;
+    padding: 0px 0 10px 0;
     justify-content: center;
+    align-items: center;
   }
 }
 
