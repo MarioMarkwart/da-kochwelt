@@ -23,16 +23,19 @@
     <title>Mail erfolgreich versendet!</title>
   </head>
 
-  <body onload='includeHTML()'>
+  <body onload="includeHTML()">
     <nav class="navigation" w3-include-html="./templates/header.html"></nav>
-    <div class="contact-submitted">
-      <div>
-        Vielen Dank für Ihre Nachricht!<br /><br />Wir werden Sie
-        schnellstmöglich kontaktieren!
+    <div class="container-contact-send">
+      <div class="contact-card-send margin-side">
+        <div>
+          Vielen Dank für Ihre Nachricht!<br /><br />Wir werden Sie
+          schnellstmöglich kontaktieren!
+        </div>
+
+        <a href="./index.html" class="link"
+          ><button class="button-back">Zur Hauptseite</button></a
+        >
       </div>
-      <button class="ing-button">
-        <a href="./index.html" class="link">Zurück zur Hauptseite</a>
-      </button>
     </div>
     <footer w3-include-html="./templates/footer.html"></footer>
   </body>
