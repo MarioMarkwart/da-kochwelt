@@ -359,9 +359,9 @@ p {
   }
 
   .margin-side-imp-priv {
-  margin-left: 120px;
-  margin-right: 120px;
-}
+    margin-left: 120px;
+    margin-right: 120px;
+  }
 
   .padding-side {
     padding-left: 150px;
@@ -440,9 +440,9 @@ p {
   }
 
   .margin-side-imp-priv {
-  margin-left: 2px;
-  margin-right: 20px;
-}
+    margin-left: 2px;
+    margin-right: 20px;
+  }
 
   .curry-content {
     flex-direction: column;
@@ -555,11 +555,11 @@ p {
   }
 
   .container-imprint {
-  padding-top: 30px !important;
-  padding-bottom: 30px !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-}
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
 
 /* 560px */
@@ -593,9 +593,9 @@ p {
   }
 
   .margin-side-imp-priv {
-  margin-left: 10px;
-  margin-right: 10px;
-}
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .footer {
@@ -642,10 +642,10 @@ p {
     gap: 25px;
   }
 
-    .container-imprint {
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-}
+  .container-imprint {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 }

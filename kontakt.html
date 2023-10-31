@@ -27,7 +27,6 @@
     <nav w3-include-html="./templates/header.html" class="navigation"></nav>
 
     <div class="container-contact">
-      
       <div class="contact-card margin-side">
         <form onsubmit="sendMail(event)" class="contact-form">
           <label class="contact-label">
@@ -43,7 +42,12 @@
           </label>
           <label class="contact-label" id="dropdown">
             <div>Wähle eine Kategorie:</div>
-            <select name="categories" id="dropdown" class="rec-dropdown" required>
+            <select
+              name="categories"
+              id="dropdown"
+              class="rec-dropdown"
+              required
+            >
               <option value="">-bitte auswählen-</option>
               <option value="kontaktanfragen">Kontaktanfragen</option>
               <option value="rezeptanfragen">Rezeptanfragen</option>
@@ -61,13 +65,19 @@
             ></textarea>
           </label>
           <label class="contact-label-data"
-            ><input type="checkbox" name="Datenschutz" class="data-checkbox" required />
+            ><input
+              type="checkbox"
+              name="Datenschutz"
+              class="data-checkbox"
+              required
+            />
             <div class="contact-agree-data">
-              <a href="./index.html" target="_blank">Datenschutzbestimmungen</a>
+              <a href="./privacy.html" target="_blank"
+                >Datenschutzbestimmungen</a
+              >
               annehmen
             </div>
           </label>
-        
 
           <!-- <div class="submit-flex"> -->
           <div class="submit-flex">
