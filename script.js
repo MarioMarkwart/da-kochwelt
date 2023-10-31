@@ -34,14 +34,7 @@ function sendMail(event) {
 }
 
 
-/* --- calculate amount-values on recipes --- */
-let originAmounts = [];
-let inputAmountSave = 4;
-
-function getInputAmount() {
-  //get the value of inputfield
-  let inputAmount = document.getElementById("ing-input").value;
-
+function ckeckInputAmount(inputAmount) {
   if (inputAmount < 1) {
     document.getElementById('ing-input').value = inputAmountSave;
     inputAmount = inputAmountSave;
@@ -50,8 +43,9 @@ function getInputAmount() {
   else {
     inputAmountSave = inputAmount;
   }
+}
 
-  // find all classes with 'ing-amount'
+function saveOriginAmounts() {
   let amounts = document.getElementsByClassName("ing-amount");
 
   //saving the original amount-values only on the first run
@@ -60,25 +54,35 @@ function getInputAmount() {
       originAmounts.push(amounts[i].innerHTML);
     }
   }
-  
-  //iterate through the array
+  return amounts;
+}
+
+function calculateNewAmounts(inputAmount) {
   for (let i = 0; i < amounts.length; i++) {
     //reset the actual to the original value to calculate with it
     amounts[i].innerHTML = originAmounts[i];
-
-    //the resetet value can be multiplied with the inputAmount
-    //if amount gets zero
     if (isNumeric(amounts[i].innerHTML)) {
       amounts[i].innerHTML =
         Math.round(((amounts[i].innerHTML / 4) + Number.EPSILON) * inputAmount * 10) / 10;
-      console.log("amounts: " + amounts[i].innerHTML);
     }
   }
 }
 
+/* --- calculate amount-values on recipes --- */
+let originAmounts = [];
+let inputAmountSave = 4;
+
+function getInputAmount() {
+  
+  let inputAmount = document.getElementById("ing-input").value;
+  
+  amounts = saveOriginAmounts();
+
+  ckeckInputAmount(inputAmount);
+  calculateNewAmounts(inputAmount);
+}
 
 /* --- check if value is numeric for calculation in recipe--- */
-/* https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number */
 function isNumeric(str) {
   if (typeof str != "string") {
     return false;
@@ -96,11 +100,3 @@ function dialogRemove() {
   document.getElementById("dialog").classList.add("d-none");
 }
 
-// function imgreplace() {
-//   document.getElementById("menu-button").innerHTML = `<img
-//                 src="./img/icons/burger-close.svg"
-//                 onclick="dialogRemove()"
-//                 class="burger-close"
-//                 id="menu-button"
-//               />`
-// }

@@ -82,6 +82,7 @@
   color: white;
   text-decoration: none;
   border: 9.5px solid green;
+  border-radius: 0 5px 5px 0;
 }
 
 .ing-input {
